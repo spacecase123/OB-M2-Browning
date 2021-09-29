@@ -1,0 +1,73 @@
+﻿<Page x:Class="OpenBullet.Pages.Main.Tools.TessDataDownloads"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:OpenBullet.Pages.Main.Tools"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TessDataDownloads" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <StackPanel
+			Name="topMenu"
+			Orientation="Horizontal">
+            <FrameworkElement.Resources>
+                <ResourceDictionary>
+                    <Style
+						TargetType="{x:Type Label}"
+						x:Key="{x:Type Label}">
+                        <Setter
+							Property="FontWeight"
+							Value="Bold" />
+                        <Setter
+							Property="Margin"
+							Value="0 0 5 0" />
+                        <Setter
+							Property="Foreground"
+							Value="{DynamicResource ForegroundMain}" />
+                        <Setter
+							Property="FontFamily"
+							Value="pack://application:,,,/Fonts/#Century Gothic" />
+                        <Setter
+							Property="FontSize"
+							Value="12" />
+                        <Setter
+							Property="VerticalAlignment"
+							Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </FrameworkElement.Resources>
+        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="0*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width=".1*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Column="0" Name="LanguageList" />
+
+            <Button Content=">" ToolTip="Right click to add all" Grid.Column="1" Height="90" VerticalAlignment="Top" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown" />
+            <Button Content="X" ToolTip="Right click to remove all" Grid.Column="1" Height="90" VerticalAlignment="Bottom" Click="Button_Click_1" MouseRightButtonDown="Button_MouseRightButtonDown_1" />
+
+            <ListBox Grid.Column="2" Name="DownloadList" />
+        </Grid>
+
+        <DockPanel Grid.Row="1">
+            <Button Content="Download" Name="DownloadBtn" Click="DownloadBtn_Click" />
+        </DockPanel>
+
+        <DockPanel Grid.Row="2">
+            <TextBox Name="LogsText" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" />
+        </DockPanel>
+    </Grid>
+</Page>

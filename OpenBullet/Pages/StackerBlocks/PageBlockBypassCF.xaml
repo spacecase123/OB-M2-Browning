@@ -1,0 +1,35 @@
+﻿<Page x:Class="OpenBullet.Pages.StackerBlocks.PageBlockBypassCF"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OpenBullet.Pages.StackerBlocks"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="400"
+      Title="PageBlockBypassCF">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <DockPanel>
+                <Label Content="URL:" />
+                <TextBox Text="{Binding Url, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+            <DockPanel>
+                <Label Content="User Agent:" />
+                <TextBox Text="{Binding UserAgent, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+            <CheckBox IsChecked="{Binding PrintResponseInfo}" Content="Stampa Info Di Risposta" VerticalContentAlignment="Center" />
+            <CheckBox IsChecked="{Binding ErrorOn302}" Content="Imposta lo Stato Errore su 302" VerticalContentAlignment="Center" />
+
+            <TextBlock
+                   FontSize="12" 
+                   TextWrapping="Wrap" 
+                   Margin="0 10 0 0"
+                   Foreground="{DynamicResource ForegroundMain}"><Run Text="Se la sfida Cloudflare richiede un reCaptcha da risolvere, questo blocco verificherà se hai definito una chiave API 2captcha. Se ne trova uno, verrà utilizzato per risolvere le sfide."/><LineBreak/><LineBreak/><Span Foreground="DarkOrange"><Run Text="AVVERTIMENTO!"/></Span><LineBreak/><Span Foreground="DarkOrange"><Run Text="Questo può prosciugare rapidamente il tuo account captcha se fatto per errore!"/><LineBreak/></Span></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

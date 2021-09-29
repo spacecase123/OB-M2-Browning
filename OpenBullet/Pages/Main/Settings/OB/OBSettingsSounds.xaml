@@ -1,0 +1,21 @@
+﻿<Page x:Class="OpenBullet.OBSettingsSounds"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OpenBullet"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="780"
+      Title="OBSettingsSounds">
+
+    <Grid>
+        <StackPanel Margin="5">
+            <CheckBox Content="Abilita" IsChecked="{Binding EnableSounds}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <Label Content="Riproduci Suono Per ogni Hit"/>
+            <TextBox Text="{Binding OnHitSound}" />
+            <Label Content="Riproduci Suono al Ricaricamento Dei proxy"/>
+            <TextBox Text="{Binding OnReloadSound}" />
+            <Label Content="NOTA: I suoni personalizzati devono essere inseriti nella sottodirectory Suoni e avere un'estensione .wav!" Foreground="{DynamicResource ForegroundCustom}"/>
+        </StackPanel>
+    </Grid>
+</Page>
