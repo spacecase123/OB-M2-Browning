@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <DockPanel>
-                <Label Content="Action:" />
+                <Label Content="Azione:" />
                 <ComboBox x:Name="actionCombobox" SelectionChanged="actionCombobox_SelectionChanged"/>
             </DockPanel>
             <DockPanel>

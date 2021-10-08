@@ -12,8 +12,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="151*" />
+            <ColumnDefinition Width="239*" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -21,30 +21,30 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
-            <Label Content="General" FontWeight="Bold"/>
-            <CheckBox Content="Allow Concurrent Use" IsChecked="{Binding ConcurrentUse}" VerticalContentAlignment="Center"/>
-            <CheckBox Content="Never Ban Proxies" IsChecked="{Binding NeverBan}" VerticalContentAlignment="Center"/>
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="5,5,0.6,4.8">
+            <Label Content="Generale" FontWeight="Bold"/>
+            <CheckBox Content="Consenti utilizzo simultaneo" IsChecked="{Binding ConcurrentUse}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Non Bannare Mai i Proxies" IsChecked="{Binding NeverBan}" VerticalContentAlignment="Center"/>
             <DockPanel>
-                <Label Content="Ban Loop Evasion (0 = disabled)" />
+                <Label Content="Evasione del ban loop (0 = disabilitato)" />
                 <xctk:IntegerUpDown Background="Transparent" Width="60" Margin="10 0 0 0" Value="{Binding BanLoopEvasion}" Foreground="{DynamicResource ForegroundMain}" HorizontalAlignment="Right" />
                 <DockPanel.ToolTip>
                     How many times a data line should be retried upon BAN status before being sent to TOCHECK
                 </DockPanel.ToolTip>
             </DockPanel>
-            <CheckBox Content="Shuffle Proxies on Start" IsChecked="{Binding ShuffleOnStart}" VerticalContentAlignment="Center" />
+            <CheckBox Content="Mischia Proxy All'Avvio" IsChecked="{Binding ShuffleOnStart}" VerticalContentAlignment="Center" />
             <Label Content="CloudFlare" FontWeight="Bold"/>
-            <CheckBox Content="Don't Reuse Clearance Cookie (CF)" IsChecked="{Binding AlwaysGetClearance}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Non Riutilizzare Cookies Di Autorizzazione (CF)" IsChecked="{Binding AlwaysGetClearance}" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <Grid Grid.Column="1" Grid.Row="0" Margin="5">
+        <Grid Grid.Column="1" Grid.Row="0" Margin="9.4,5,5,4.8">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            
+
             <Label Grid.Row="0" Content="Global Ban Keys:" />
             <RichTextBox x:Name="globalBanKeysTextbox" Grid.Row="1" Background="{DynamicResource BackgroundSecondary}" Foreground="{DynamicResource ForegroundMain}" FontFamily="Consolas" TextChanged="globalBanKeysTextbox_TextChanged">
                 <RichTextBox.Resources>
@@ -64,17 +64,17 @@
 
         </Grid>
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0.2,0,-0.4">
             <StackPanel>
-                <Label Content="Reloading"/>
-                <CheckBox Content="Reload proxies when all banned" IsChecked="{Binding Reload}" VerticalContentAlignment="Center"/>
+                <Label Content="Ricaricando"/>
+                <CheckBox Content="Ricarica Proxies quando tutti sono bannati" IsChecked="{Binding Reload}" VerticalContentAlignment="Center"/>
                 <DockPanel DockPanel.Dock="Top">
-                    <Label Content="Reload interval in minutes (0 = only reload when all banned):" />
+                    <Label Content="Intervallo di ricarica in minuti (0 = ricarica solo quanto tutti sono bannati):" />
                     <xctk:IntegerUpDown Background="Transparent" Width="70" Margin="10 0 0 0" Value="{Binding ReloadInterval}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right"/>
                 </DockPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Source:"/>
+                    <Label Content="Risorsa:"/>
                     <ComboBox x:Name="reloadSourceCombobox" HorizontalAlignment="Left" SelectionChanged="reloadSourceCombobox_SelectionChanged"/>
                     <Button x:Name="addRemoteProxySourceButton" Margin="50 0 0 0" Content="Add Remote Source" Click="addRemoteProxySourceButton_Click" Visibility="Collapsed"/>
                     <Button x:Name="clearRemoteProxySourcesButton" Content="Clear Remote Sources" Click="clearRemoteProxySourcesButton_Click" Visibility="Collapsed"/>

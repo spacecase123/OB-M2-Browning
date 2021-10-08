@@ -54,7 +54,7 @@
                         <DropShadowEffect/>
                     </Image.Effect>
                 </Image>
-                <Label x:Name="titleLabel" Content="OB ONE M2 BrowninG by AreA 51 CreW" FontFamily="pack://application:,,,/Fonts/#Century Gothic" FontSize="14" Margin="0,2,0,1.4" Width="278" Background="{x:Null}" Foreground="White" />
+                <Label x:Name="titleLabel" Content="OB ONE M2 BrowninG" FontFamily="pack://application:,,,/Fonts/#Century Gothic" FontSize="14" Margin="0,2,0,1.4" Width="278" Background="{x:Null}" Foreground="White" />
             </StackPanel>
 
             <Grid x:Name="dragPanel" MouseDown="dragPanel_MouseDown" Margin="0.2,0,0.2,0.4" Grid.Column="1">
@@ -101,27 +101,27 @@
                         <Setter Property="VerticalAlignment" Value="Center" />
                     </Style>
                 </StackPanel.Resources>
-                <Image x:Name="runner_Ico" Margin="0,0,0,1.4" Source="icons8-corsa-240.png" ToolTip="Runner" MouseDown="menuOptionRunner_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="runner_Ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-corsa-240.png" ToolTip="Runner" MouseDown="menuOptionRunner_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionRunner" Content="Runner" MouseDown="menuOptionRunner_MouseDown" />
-                <Image x:Name="proxy_Ico" Margin="0,0,0,1.4" Source="icons8-emittente-240.png" ToolTip="Proxy" MouseDown="menuOptionProxyManager_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="proxy_Ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-emittente-240.png" ToolTip="Proxy" MouseDown="menuOptionProxyManager_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionProxyManager" Content="Proxies" MouseDown="menuOptionProxyManager_MouseDown" />
-                <Image x:Name="wordlist_ico" Margin="0,0,0,1.4" Source="icons8-nuovo-documento-240.png" ToolTip="WordList" MouseDown="menuOptionWordlistManager_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="wordlist_ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-nuovo-documento-240.png" ToolTip="WordList" MouseDown="menuOptionWordlistManager_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionWordlistManager" Content="Wordlists" MouseDown="menuOptionWordlistManager_MouseDown" />
-                <Image x:Name="comfigs_Ico" Margin="0,0,0,1.4" Source="icons8-modifica-cartella-240.png" ToolTip="Configurazioni" MouseDown="menuOptionConfigCreator_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="comfigs_Ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-modifica-cartella-240.png" ToolTip="Configurazioni" MouseDown="menuOptionConfigCreator_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionConfigCreator" Content="Configs" MouseDown="menuOptionConfigCreator_MouseDown" />
-                <Image x:Name="database_ico" Margin="0,0,0,1.4" Source="icons8-stack-of-paper-240.png" ToolTip="Data Base" MouseDown="menuOptionHitsDatabase_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="database_ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-stack-of-paper-240.png" ToolTip="Data Base" MouseDown="menuOptionHitsDatabase_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionHitsDatabase" Content="Hits DB" MouseDown="menuOptionHitsDatabase_MouseDown" />
-                <Image x:Name="tools_ico" Margin="0,0,0,1.4" Source="icons8-supporto-240.png" ToolTip="Strumenti" MouseDown="menuOptionTools_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="tools_ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-supporto-240.png" ToolTip="Strumenti" MouseDown="menuOptionTools_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionTools" Content="Tools" MouseDown="menuOptionTools_MouseDown" />
-                <Image x:Name="settings_ico" Margin="0,0,0,1.4" Source="icons8-impostazioni-240 (1).png" ToolTip="Impostazioni" MouseDown="menuOptionSettings_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="settings_ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-impostazioni-240 (1).png" ToolTip="Impostazioni" MouseDown="menuOptionSettings_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionSettings" Content="Settings" MouseDown="menuOptionSettings_MouseDown" />
-                <Image x:Name="area51_ico" Margin="0,0,0,1.4" Source="icons8-pirati-dei-caraibi-500.png" ToolTip="Area51 Zone" MouseDown="menuOptionAbout_MouseDown" HorizontalAlignment="Right" Width="26"/>
+                <Image x:Name="area51_ico" Margin="0,0,0,1.4" Source="Images/Icons/icons8-pirati-dei-caraibi-500.png" ToolTip="Area51 Zone" MouseDown="menuOptionAbout_MouseDown" HorizontalAlignment="Right" Width="26"/>
                 <Label x:Name="menuOptionAbout" Content="Area51" MouseDown="menuOptionAbout_MouseDown" />
             </StackPanel>
 
-            <Image x:Name="logImage" Source="icons8-sincronizzare-240.png" ToolTip="Open the Log" MouseDown="logImage_MouseDown" Margin="0,5,25,3.4" Grid.Column="2" HorizontalAlignment="Right" Width="22"/>
-            <Image Grid.Column="2" x:Name="screenshotImage" Margin="0,5,0,3.4" Source="icons8-fotocamera-240.png" ToolTip="Take a Screenshot" MouseDown="screenshotImage_MouseDown" HorizontalAlignment="Right" Width="22"/>
-            <Image x:Name="openGuide" Margin="0,5,2,3.4" Source="icons8-libretto-di-risparmio-240.png" ToolTip="Manuale Utente" MouseDown="OpenGuide_MouseDown" HorizontalAlignment="Right" Width="23" Grid.ColumnSpan="2"/>
+            <Image x:Name="logImage" Source="Images/Icons/icons8-sincronizzare-240.png" ToolTip="Open the Log" MouseDown="logImage_MouseDown" Margin="0,5,25,3.4" Grid.Column="2" HorizontalAlignment="Right" Width="22"/>
+            <Image Grid.Column="2" x:Name="screenshotImage" Margin="0,5,0,3.4" Source="Images/Icons/icons8-fotocamera-240.png" ToolTip="Take a Screenshot" MouseDown="screenshotImage_MouseDown" HorizontalAlignment="Right" Width="22"/>
+            <Image x:Name="openGuide" Margin="0,5,2,3.4" Source="Images/Icons/icons8-libretto-di-risparmio-240.png" ToolTip="Manuale Utente" MouseDown="OpenGuide_MouseDown" HorizontalAlignment="Right" Width="23" Grid.ColumnSpan="2"/>
         </Grid>
 
         <Frame Grid.Column="1" Grid.Row="2" x:Name="Main" NavigationUIVisibility="Hidden" >

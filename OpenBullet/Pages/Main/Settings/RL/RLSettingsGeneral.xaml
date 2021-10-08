@@ -13,33 +13,33 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="83*" />
+            <ColumnDefinition Width="47*" />
+            <ColumnDefinition Width="65*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
+        <StackPanel Grid.Column="0" Margin="0,0,5,-0.4">
             <DockPanel DockPanel.Dock="Top">
-                <Label Content="Wait Time after bot end (millisec)" />
+                <Label Content="Attesa dopo la fine del bot (millisec)" />
                 <xctk:IntegerUpDown Background="Transparent" Width="50" Margin="10 0 0 0" Value="{Binding WaitTime}" Foreground="{DynamicResource ForegroundMain}" HorizontalAlignment="Right"/>
             </DockPanel>
             <DockPanel DockPanel.Dock="Top">
-                <Label Content="Requests Timeout (seconds)" />
+                <Label Content="Timeout Richiesta (secondi)" />
                 <xctk:IntegerUpDown Background="Transparent" Width="50" Margin="10 0 0 0" Value="{Binding RequestTimeout}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right"/>
             </DockPanel>
             <DockPanel DockPanel.Dock="Top">
-                <Label Content="Max number of Hits (0 = unlimited)" />
+                <Label Content="Max Numero di Hits (0 =illimitato)" />
                 <xctk:IntegerUpDown Background="Transparent" Width="50" Margin="10 0 0 0" Value="{Binding MaxHits}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right"/>
             </DockPanel>
-            <Label DockPanel.Dock="Top" Content="Runner Bots Display Mode" />
+            <Label DockPanel.Dock="Top" Content="Modalita vista del Runner Bots" />
             <ComboBox DockPanel.Dock="Top" x:Name="botsDisplayModeCombobox" SelectionChanged="botsDisplayModeCombobox_SelectionChanged"/>
-            <CheckBox Content="Enable Bot Log (slow, RAM-heavy)" IsChecked="{Binding EnableBotLog}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
-            <CheckBox Content="Save Last Response Source (RAM-heavy)" IsChecked="{Binding SaveLastSource}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <CheckBox Content="Abilita log dei Bots (lento, RAM-pesante)" IsChecked="{Binding EnableBotLog}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <CheckBox Content="Salva Ultima Risposta Sorgente (RAM-Pesante)" IsChecked="{Binding SaveLastSource}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
             <Label FontWeight="Bold" Content="Hits Webhook" />
-            <CheckBox Content="Enabled" IsChecked="{Binding WebhookEnabled}" />
+            <CheckBox Content="Abilita" IsChecked="{Binding WebhookEnabled}" />
             <Label Content="URL:" />
             <TextBox Text="{Binding WebhookURL}" />
-            <Label Content="Username (will be received by remote API):" />
+            <Label Content="Username (verrà ricevuto dall'API remota):" />
             <TextBox Text="{Binding WebhookUser}" />
         </StackPanel>
     </Grid>

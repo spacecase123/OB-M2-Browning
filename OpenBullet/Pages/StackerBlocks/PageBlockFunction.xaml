@@ -18,16 +18,16 @@
         
         <StackPanel Grid.Row="0">
             <DockPanel>
-                <Label Content="Variable Name:"/>
+                <Label Content="Nome Variabile:"/>
                 <TextBox Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
             <DockPanel Margin="0 5 0 0">
-                <Label Content="Input string:"/>
+                <Label Content="Stringa di Input:"/>
                 <TextBox Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}" ToolTip="For whole lists use the syntax &lt;LISTNAME[*]&gt;"/>
             </DockPanel>
-            <CheckBox VerticalContentAlignment="Center" Content="Is Capture" IsChecked="{Binding IsCapture}"/>
+            <CheckBox VerticalContentAlignment="Center" Content="Cattura" IsChecked="{Binding IsCapture}"/>
             <DockPanel Margin="0 0 0 5">
-                <Label Content="Function:"/>
+                <Label Content="Funzione:"/>
                 <ComboBox x:Name="functionTypeCombobox" SelectionChanged="functionTypeCombobox_SelectionChanged"/>
             </DockPanel>
         </StackPanel>

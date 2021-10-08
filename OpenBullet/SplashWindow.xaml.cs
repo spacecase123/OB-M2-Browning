@@ -16,10 +16,10 @@ namespace OpenBullet
     public partial class SplashWindow : Window
     {
         // Local Version Number
-        public string CurrentVersion = "1.4.4".Trim();
+        public string CurrentVersion = "1.0.1".Trim();
 
         // URL for the Changelog
-        public static string ChangelogURL = "";
+        public static string ChangelogURL = "https://gist.githubusercontent.com/Robaxman/fee5957cf409a5c441d32f85b8aab52e/raw/f6bd4b3e9a5159b287b0d267e729dcfb1dfc703e/Changelog";
 
         //WebClient for Changelog
         private readonly WebClient ChangelogGet = new WebClient();
@@ -63,20 +63,20 @@ namespace OpenBullet
             WebClient wc = new WebClient();
             try
             {
-                string NewestVersion = wc.DownloadString("https://raw.githubusercontent.com/PurityWasHere/Anomaly-Mod-Hosting/master/VersionNumber");
+                string NewestVersion = wc.DownloadString("https://gist.githubusercontent.com/Robaxman/35c7888f13d207d9120c9aa7e7a8c345/raw/453fe6228a999421a4eba2ef60441bc89343455d/VersionNumber");
 
                 string NewVersionTrimmed = NewestVersion.Trim();
                 if (CurrentVersion.Equals(NewVersionTrimmed))
                 {
-                    System.Windows.MessageBox.Show("Up to Date!", "OpenBullet Updater");
+                    System.Windows.MessageBox.Show("Tutto Aggiornato!", "OpenBullet Updater");
                 }
                 else
                 {
-                    MessageBoxResult dialogResult = System.Windows.MessageBox.Show("Update Found! Want to Update?", "OpenBullet Updater", MessageBoxButton.YesNo);
+                    MessageBoxResult dialogResult = System.Windows.MessageBox.Show("Update Trovato! Vuoi Aggiornare?", "OpenBullet Updater", MessageBoxButton.YesNo);
                     if (dialogResult == MessageBoxResult.Yes)
                     {
-                        System.Windows.MessageBox.Show("The Launcher will now close and Updater will open.", "OpenBullet Updater");
-                        Process.Start("Anomaly Updater");
+                        System.Windows.MessageBox.Show("Il Launcher adesso si chiuderà e veràà scaricata l'ultima versine.");
+                        _ = Process.Start("https://github.com/Area51Crew/OB-M2-Browning/releases/download/V.1.0.0-Beta/OB.ONE.M2.Browning.zip");
                         Environment.Exit(0);
                     }
                 }
@@ -90,6 +90,19 @@ namespace OpenBullet
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _ = Process.Start("https://t.me/AreA51Crew2021");
+        }
+
+        // Loads the text from a URL.
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                ChangeLogBox.Text = ChangelogGet.DownloadString(ChangelogURL);
+            }
+            catch (Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("Error Connecting to GitHub Changelog", "Connection Error");
+            }
         }
     }
 }

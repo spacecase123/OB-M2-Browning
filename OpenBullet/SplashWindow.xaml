@@ -36,11 +36,11 @@
             Margin="20,367,334,390" Grid.ColumnSpan="3">
             <Span
                 Foreground="{DynamicResource ForegroundBad}">
-                <Bold>ATTENTION!</Bold>
+                <Bold>ATTENZIONE!</Bold>
             </Span>
             <Span
                 Foreground="#FFFD7300">
-                Respects to Ruri for developing BB and OB<LineBreak />
+                Rispetto per Ruri per lo sviluppo di BB e OB<LineBreak />
             </Span>
         </TextBlock>
         <StackPanel
@@ -52,17 +52,17 @@
                 Source="/Images/OBIcon.png"
                 Margin="20,-10,19,20" Height="83" />
             <Label
-                Content="FOR EDUCATIONAL USE ONLY"
+                Content="SOLO A SCOPO DI STUDIO"
                 HorizontalAlignment="Center"
                 FontWeight="Bold"
                 Margin="0 -10 0 0" />
             <Label
-                Content="The developer will not be held responsible"
+                Content="Lo Sviluppatore non sarà responsabile"
                 HorizontalAlignment="Center"
                 FontSize="11"
                 Margin="0 -5 0 0" />
             <Label
-                Content="for any improper use of the program."
+                Content="per qualsiasi uso improprio del programma."
                 HorizontalAlignment="Center"
                 FontSize="11"
                 Margin="0 -10 0 0" />
@@ -76,7 +76,7 @@
             <DockPanel>
                 <Button
                     x:Name="loginButton_Copy"
-                    Content="LAUNCH"
+                    Content="AVVIA"
                     Click="AgreeButton_Click" Width="111" />
             </DockPanel>
             <Label
@@ -85,9 +85,10 @@
                 Margin="0 3 0 0" Foreground="#FF3AFF00">
                 <Button
                     x:Name="UpdateButton"
-                    Content="Check For Update"
+                    Content="Controlla Aggiornamenti"
                     Click="Update" />
             </Label>
+            <TextBox x:Name="ChangeLogBox" Height="106" TextWrapping="Wrap" Text="ChangeLog:" Margin="20,0,19,0" TextChanged="TextBox_TextChanged" VerticalAlignment="Top" TextAlignment="Left" />
             
         </StackPanel>
         <Label Content="V: 1.0.0 BETA" VerticalAlignment="Stretch" Margin="0,-5,314,770"
@@ -95,6 +96,6 @@
         <Image
                 Source="Images/Logo.png"
                 Margin="106,35,108,490" Grid.Column="1" />
-        <Button Content="Join Area51 Telegram" Margin="64,317,64,427" Grid.Column="1" Click="Button_Click" />
+        <Button Content="Entra in Area51 Telegram" Margin="64,317,64,427" Grid.Column="1" Click="Button_Click" />
     </Grid>
 </Window>

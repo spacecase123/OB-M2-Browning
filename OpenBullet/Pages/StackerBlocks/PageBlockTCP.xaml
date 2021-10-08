@@ -16,12 +16,12 @@
 
         <StackPanel Grid.Row="0">
             <DockPanel>
-                <Label Content="Variable Name:"/>
+                <Label Content="Nome Variabile:"/>
                 <TextBox Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
-            <CheckBox VerticalContentAlignment="Center" Content="Is Capture" IsChecked="{Binding IsCapture}"/>
+            <CheckBox VerticalContentAlignment="Center" Content="Cattura" IsChecked="{Binding IsCapture}"/>
             <DockPanel Margin="0 0 0 5">
-                <Label Content="Command:"/>
+                <Label Content="Comando:"/>
                 <ComboBox x:Name="tcpCommandCombobox" SelectionChanged="tcpCommandCombobox_SelectionChanged"/>
             </DockPanel>
         </StackPanel>

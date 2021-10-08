@@ -28,7 +28,7 @@
             </DockPanel>
             <DockPanel>
                 <CheckBox x:Name="captureBox" VerticalContentAlignment="Center" DockPanel.Dock="Left" Content="Is Capture" IsChecked="{Binding IsCapture}" Foreground="{Binding Path=IsCapture, Converter={StaticResource BrushConverter}}" Click="CaptureBox_Click"/>
-                <Label DockPanel.Dock="Left" Content="Var/Cap Name:" Margin="5 0 0 0" />
+                <Label DockPanel.Dock="Left" Content="Var/Cap Nome:" Margin="5 0 0 0" />
                 <TextBox DockPanel.Dock="Left" Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}" />
             </DockPanel>
 
@@ -67,24 +67,24 @@
                 <TabItem>
                     <StackPanel>
                         <DockPanel>
-                            <Label Content="Left string:" />
+                            <Label Content="Stringa sinistra:" />
                             <TextBox Text="{Binding LeftString, UpdateSourceTrigger=PropertyChanged}"/>
                         </DockPanel>
                         <DockPanel>
-                            <Label Content="Right string:" />
+                            <Label Content="String destra:" />
                             <TextBox Text="{Binding RightString, UpdateSourceTrigger=PropertyChanged}"/>
                         </DockPanel>
                         <DockPanel>
-                            <CheckBox Content="Recursive" IsChecked="{Binding Recursive}" VerticalContentAlignment="Center"/>
+                            <CheckBox Content="Ricorsivo" IsChecked="{Binding Recursive}" VerticalContentAlignment="Center"/>
                             <CheckBox Content="Enc. Output" IsChecked="{Binding EncodeOutput}" VerticalContentAlignment="Center"/>
-                            <CheckBox Content="Create Empty" IsChecked="{Binding CreateEmpty}" VerticalContentAlignment="Center"/>
-                            <CheckBox Content="Use Regex" IsChecked="{Binding UseRegexLR}" VerticalContentAlignment="Center" >
+                            <CheckBox Content="Crea vuoto" IsChecked="{Binding CreateEmpty}" VerticalContentAlignment="Center"/>
+                            <CheckBox Content="Usa Regex" IsChecked="{Binding UseRegexLR}" VerticalContentAlignment="Center" >
                                 <CheckBox.ToolTip>
                                     <TextBlock>Whether the program matches the LEFT and RIGHT strings through a regex pattern<LineBreak /> or with simple string in string searches</TextBlock>
                                 </CheckBox.ToolTip>
                             </CheckBox>
                         </DockPanel>
-                        <Label Content="Automatic mode:" />
+                        <Label Content="Modo Automatico:" />
 
                         <RichTextBox Height="200" x:Name="LRRTB" FontFamily="Consolas" Foreground="{DynamicResource ForegroundMain}" Background="{DynamicResource BackgroundSecondary}" KeyUp="LRRTB_KeyUp">
                             <RichTextBox.Resources>

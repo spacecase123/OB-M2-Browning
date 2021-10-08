@@ -290,7 +290,7 @@
                         </StackPanel.Resources>
 
                         <Label x:Name="daysLabel" Content="{Binding TimerDays}" />
-                        <Label Content="days" />
+                        <Label Content="Giorni" />
                         <Label x:Name="hoursLabel" Content="{Binding TimerHours}" />
                         <Label Content=":" />
                         <Label x:Name="minutesLabel" Content="{Binding TimerMinutes}" />
@@ -413,11 +413,11 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-                    <Button x:Name="selectConfigButton" IsEnabled="{Binding ControlsEnabled}" Content="Select CFG" Click="selectConfigButton_Click"/>
+                    <Button x:Name="selectConfigButton" IsEnabled="{Binding ControlsEnabled}" Content="Seleziona CFG" Click="selectConfigButton_Click"/>
                     <Label Content="{Binding ConfigName}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                    <Button x:Name="selectWordlistButton" IsEnabled="{Binding ControlsEnabled}" Content="Select List" Click="selectWordlistButton_Click" />
+                    <Button x:Name="selectWordlistButton" IsEnabled="{Binding ControlsEnabled}" Content="Seleziona Lista" Click="selectWordlistButton_Click" />
                     <Label Content="{Binding WordlistName}"/>
                 </StackPanel>
                 <RichTextBox x:Name="logBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsReadOnly="True" BorderThickness="0" Background="{DynamicResource BackgroundSecondary}" Padding="5" FontFamily="Consolas" VerticalScrollBarVisibility="Visible">
@@ -432,7 +432,7 @@
                     <Button HorizontalAlignment="Left" x:Name="showManagerButton" Click="showManagerButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Images/Icons/left.png" Width="20" />
-                            <TextBlock VerticalAlignment="Center" Margin="5 0">Back</TextBlock>
+                            <TextBlock VerticalAlignment="Center" Margin="5 0">Indietro</TextBlock>
                         </StackPanel>
                     </Button>
                 </StackPanel>

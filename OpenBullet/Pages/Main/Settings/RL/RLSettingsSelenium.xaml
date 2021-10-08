@@ -16,29 +16,29 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Margin="5">
-            <Label Content="Browser Type" />
+            <Label Content="Imposta Browser" />
             <ComboBox x:Name="browserTypeCombobox" SelectionChanged="browserTypeCombobox_SelectionChanged"/>
-            <CheckBox Content="Headless Mode" IsChecked="{Binding Headless}" VerticalContentAlignment="Center"/>
-            <CheckBox Content="Draw Mouse Movement" IsChecked="{Binding DrawMouseMovement}" VerticalContentAlignment="Center"/>
-            <Label Content="Chrome Binary Location:"/>
+            <CheckBox Content="Modalità senza intestazione" IsChecked="{Binding Headless}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Traccia i movimenti del mouse" IsChecked="{Binding DrawMouseMovement}" VerticalContentAlignment="Center"/>
+            <Label Content="Percorso eseguibile di Chrome:"/>
             <TextBox Text="{Binding ChromeBinaryLocation}" />
-            <Label Content="Firefox Binary Location:"/>
+            <Label Content="Percorso Eseguibile di Firefox:"/>
             <TextBox Text="{Binding FirefoxBinaryLocation}" />
             <DockPanel DockPanel.Dock="Top">
-                <Label Content="Default Timeout" />
+                <Label Content="Tempo massimo di attesa di Default" />
                 <xctk:IntegerUpDown Background="Transparent" Width="50" Margin="10 0 0 0" Minimum="1" Maximum="100" Value="{Binding PageLoadTimeout}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right"/>
             </DockPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="5">
-            <Label Content="Chrome Extensions:" >
+            <Label Content="Estensione di Chrome:" >
                 <Label.ToolTip>
                     <TextBlock>One filename per line, example:<LineBreak/>extension1.crx<LineBreak/>extension2.crx</TextBlock>
                 </Label.ToolTip>
             </Label>
             <TextBox x:Name="extensionsBox" AcceptsReturn="True" TextWrapping="Wrap" Height="100" VerticalScrollBarVisibility="Auto" TextChanged="extensionsBox_TextChanged"/>
-            <Label Foreground="{DynamicResource ForegroundCustom}" Content="NOTE: The .crx files need to be in the ChromeExtensions subfolder."/>
-            <Label Foreground="{DynamicResource ForegroundBad}" Content="WARNING: Extensions ONLY work when using Chrome in non-headless mode" />
+            <Label Foreground="{DynamicResource ForegroundCustom}" Content="NOTA: i file .crx devono trovarsi nella sottocartella ChromeExtensions."/>
+            <Label Foreground="{DynamicResource ForegroundBad}" Content="ATTENZIONE: Le estensioni funzionano SOLO quando si usa Chrome in modalità non headless" />
         </StackPanel>
     </Grid>
 </Page>

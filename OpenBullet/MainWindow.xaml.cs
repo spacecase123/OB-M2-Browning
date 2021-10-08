@@ -40,7 +40,7 @@ namespace OpenBullet
         public About AboutPage { get; set; }
         public System.Drawing.Rectangle Bounds { get; private set; }
 
-        private string title = $"OB ONE M2 BrowninG by AreA 51 CreW";
+        private string title = $"OB ONE M2 BrowninG {Globals.obVersion}";
         private bool maximized = false;
         System.Windows.Point _startPosition;
         bool _isResizing = false;

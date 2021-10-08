@@ -16,7 +16,7 @@
 
         <StackPanel Grid.Row="0">
             <DockPanel>
-                <Label Content="Variable Name:" />
+                <Label Content="Nome Variabile:" />
                 <TextBox Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}" />
             </DockPanel>
             <DockPanel Margin="0,0,0,5">
@@ -27,13 +27,13 @@
                 <CheckBox Content="Base64" IsChecked="{Binding IsBase64, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" />
             </DockPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Language:" VerticalContentAlignment="Center" />
+                <Label Content="Lingua:" VerticalContentAlignment="Center" />
                 <ListBox ToolTip="Only sets language when clicked!" Name="LanguageList" Width="175" Height="60" MaxHeight="60" SelectionChanged="LanguageList_SelectionChanged" />
                 <Label FontSize="8" Content="DEVI FARE CLIC PER IMPOSTARE &#xD;&#xA;UNA LINGUA" Height="32" />
             </StackPanel>
             <Label FontSize="8.5" HorizontalContentAlignment="Center" Content="La lingua impostata nell'elenco sembra essere ripristinata quando si passa a/da loliscipt, NON LO FA." />
             <Label FontSize="8.5" HorizontalContentAlignment="Center" Content="Usa i pulsanti per scorrere le lingue, usando la rotellina di scorrimento del mouse salterai molto." />
-            <Label Content="Custom Headers:" />
+            <Label Content="Headers Personalizzato:" />
             <RichTextBox x:Name="customHeadersRTB" FontFamily="Consolas" Height="100" VerticalScrollBarVisibility="Auto" LostFocus="customHeadersRTB_LostFocus" Background="{DynamicResource BackgroundSecondary}" Foreground="{DynamicResource ForegroundMain}">
                 <RichTextBox.Resources>
                     <Style TargetType="{x:Type Paragraph}">
@@ -64,14 +64,14 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <CheckBox Grid.Row="0" Content="Set Contrast, Gamma, Brightness" IsChecked="{Binding ConGamBri, UpdateSourceTrigger=PropertyChanged}" />
-            <CheckBox Grid.Row="1" Content="Set Saturation" IsChecked="{Binding Saturate, UpdateSourceTrigger=PropertyChanged}" />
-            <CheckBox Grid.Row="2" Content="Set Colors Transparent" IsChecked="{Binding Transparent, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" />
-            <CheckBox Grid.Row="3" Content="OnlyShow" IsChecked="{Binding OnlyShow, UpdateSourceTrigger=PropertyChanged}" ToolTip="Currently only show black (0,0,0)" />
-            <CheckBox Grid.Row="4" Content="Grayscale" IsChecked="{Binding GrayScale, UpdateSourceTrigger=PropertyChanged}" />
-            <CheckBox Grid.Row="5" Content="Remove Lines" IsChecked="{Binding RemoveLines, UpdateSourceTrigger=PropertyChanged}" ToolTip="This is still in beta!" />
-            <CheckBox Grid.Row="6" Content="Remove Noise" IsChecked="{Binding RemoveNoise, UpdateSourceTrigger=PropertyChanged}" />
-            <CheckBox Grid.Row="7" Content="Dilate" IsChecked="{Binding Dilate, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Row="0" Content="Set Contrasto, Gamma, Brightness" IsChecked="{Binding ConGamBri, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Row="1" Content="Set Saturazione" IsChecked="{Binding Saturate, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Row="2" Content="Set Colori Transparente" IsChecked="{Binding Transparent, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" />
+            <CheckBox Grid.Row="3" Content="Mostra Solo" IsChecked="{Binding OnlyShow, UpdateSourceTrigger=PropertyChanged}" ToolTip="Currently only show black (0,0,0)" />
+            <CheckBox Grid.Row="4" Content="Scala di Grigi" IsChecked="{Binding GrayScale, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Row="5" Content="Rimuovi Linee" IsChecked="{Binding RemoveLines, UpdateSourceTrigger=PropertyChanged}" ToolTip="This is still in beta!" />
+            <CheckBox Grid.Row="6" Content="Rimuovi Disturbo" IsChecked="{Binding RemoveNoise, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Row="7" Content="Dilata" IsChecked="{Binding Dilate, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox Grid.Column="1" Text="{Binding Contrast, UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="10,0,120,0" />
             <TextBox Grid.Column="1" Text="{Binding Gamma, UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="65,0" />

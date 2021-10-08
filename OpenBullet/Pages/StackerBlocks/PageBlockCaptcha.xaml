@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel>
             <DockPanel>
-                <Label Content="Variable Name:" />
+                <Label Content="Nome Variabile:" />
                 <TextBox Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
             <DockPanel Margin="0 5 0 0">
@@ -23,7 +23,7 @@
                 <TextBox Text="{Binding UserAgent, UpdateSourceTrigger=PropertyChanged}" ToolTip="User Agent to use during the download request"/>
             </DockPanel>
             <CheckBox Content="Base 64 Captcha in Url box" IsChecked="{Binding Base64}" VerticalContentAlignment="Center" ToolTip="Whether in the box above there is a base64-encoded representation of an image"/>
-            <CheckBox Content="Use Previously Saved Screenshot" IsChecked="{Binding SendScreenshot}" VerticalContentAlignment="Center" ToolTip="Whether to use a screenshot that was previously saved via selenium"/>
+            <CheckBox Content="Usa screenshot salvato in precedenza" IsChecked="{Binding SendScreenshot}" VerticalContentAlignment="Center" ToolTip="Whether to use a screenshot that was previously saved via selenium"/>
         </StackPanel>
     </Grid>
 </Page>

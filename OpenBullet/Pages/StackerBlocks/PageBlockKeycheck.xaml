@@ -17,7 +17,7 @@
         <StackPanel Grid.Row="0">
             <DockPanel>
                 <CheckBox Content="Insta Ban 4xx" IsChecked="{Binding Block.BanOn4XX}" VerticalContentAlignment="Center"/>
-                <CheckBox Content="Banna Se Non Trova la chiave" IsChecked="{Binding Block.BanOnToCheck}" VerticalContentAlignment="Center"/>
+                <CheckBox Content="Banna Se Non Trovi la chiave" IsChecked="{Binding Block.BanOnToCheck}" VerticalContentAlignment="Center"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Keychains:" />

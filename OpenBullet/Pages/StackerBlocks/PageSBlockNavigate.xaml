@@ -19,7 +19,7 @@
                 <Label Content="Timeout (seconds):"/>
                 <xctk:IntegerUpDown Value="{Binding Timeout}" Minimum="0" Maximum="300" Width="60" HorizontalAlignment="Left" />
             </DockPanel>
-            <CheckBox Content="Ban on Timeout" IsChecked="{Binding BanOnTimeout}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Banna per tempo scaduto" IsChecked="{Binding BanOnTimeout}" VerticalContentAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

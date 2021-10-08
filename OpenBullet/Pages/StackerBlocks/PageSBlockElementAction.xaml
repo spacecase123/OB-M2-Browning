@@ -23,7 +23,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Find Element By:"/>
+                <Label Grid.Column="0" Content="Cerca Elementi per:"/>
                 <ComboBox Grid.Column="1" x:Name="locatorCombobox" SelectionChanged="locatorCombobox_SelectionChanged"/>
                 <Label Grid.Column="2" Content="="/>
                 <TextBox Grid.Column="3" Text="{Binding ElementString, UpdateSourceTrigger=PropertyChanged}"/>
@@ -31,10 +31,10 @@
             <DockPanel Margin="0 5 0 0">
                 <Label Content="With Index ="/>
                 <xctk:IntegerUpDown Value="{Binding ElementIndex}" Minimum="0" Maximum="1000" Width="60" HorizontalAlignment="Left" />
-                <CheckBox Content="Recursive (all indexes)" IsChecked="{Binding Recursive}" VerticalContentAlignment="Center"/>
+                <CheckBox Content="Ricorsivo (tutti gli indici)" IsChecked="{Binding Recursive}" VerticalContentAlignment="Center"/>
             </DockPanel>
             <DockPanel Margin="0 5 0 0">
-                <Label Content="Action:"/>
+                <Label Content="Azione:"/>
                 <ComboBox x:Name="actionCombobox" SelectionChanged="actionCombobox_SelectionChanged"/>
             </DockPanel>
             <DockPanel Margin="0 5 0 0">
@@ -42,10 +42,10 @@
                 <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
             <DockPanel Margin="0 5 0 0">
-                <Label Content="Output Variable"/>
+                <Label Content="Output Variabile"/>
                 <TextBox Text="{Binding OutputVariable, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
-            <CheckBox Content="Is Capture" IsChecked="{Binding IsCapture}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Cattura" IsChecked="{Binding IsCapture}" VerticalContentAlignment="Center"/>
         </StackPanel>
 
         <TextBlock Grid.Row="1" x:Name="functionInfoTextblock" TextWrapping="WrapWithOverflow" Foreground="{DynamicResource ForegroundMain}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
