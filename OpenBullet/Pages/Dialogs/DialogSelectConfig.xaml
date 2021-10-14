@@ -25,7 +25,7 @@
             <Button x:Name="searchButton" Grid.Column="1" Click="searchButton_Click" >
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Images/Icons/search.png" Width="20" />
-                    <TextBlock VerticalAlignment="Center" Margin="5 0">Search</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Margin="5 0">Cerca</TextBlock>
                 </StackPanel>
             </Button>
         </Grid>
@@ -137,17 +137,17 @@
                 <GridView>
                     <GridViewColumn Width="130" DisplayMemberBinding="{Binding Path=Name}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Name" Click="listViewColumnHeader_Click">Name</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Name" Click="listViewColumnHeader_Click">Nome</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Config.Settings.Author}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Author" Click="listViewColumnHeader_Click">Author</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Author" Click="listViewColumnHeader_Click">Autore</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Category}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Category" Click="listViewColumnHeader_Click">Category</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Category" Click="listViewColumnHeader_Click">Categoria</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Config.AllowedWordlists}">
@@ -177,7 +177,7 @@
                     </GridViewColumn>
                     <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=Config.Settings.LastModified}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="LastModified" Click="listViewColumnHeader_Click">Last Modified</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="LastModified" Click="listViewColumnHeader_Click">Ultima Modifica</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                 </GridView>
@@ -185,7 +185,7 @@
         </ListView>
 
         <TextBox Grid.Row="2" x:Name="searchBox" Margin="0,0,545,0" TextChanged="SearchBox_TextChanged" />
-        <Button Grid.Row="2" x:Name="selectButton" Content="Select" Click="selectButton_Click" Margin="165,0,0,0" />
+        <Button Grid.Row="2" x:Name="selectButton" Content="Seleziona" Click="selectButton_Click" Margin="165,0,0,0" />
 
     </Grid>
 </Page>

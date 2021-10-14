@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
-      d:DesignHeight="550"
-      Title="PageBlockRequest" Width="429.139">
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="PageBlockRequest">
 
     <Grid>
         <StackPanel>

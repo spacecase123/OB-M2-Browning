@@ -63,12 +63,12 @@ namespace OpenBullet.Pages.Main.Settings
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             OBIOManager.SaveSettings(Globals.obSettingsFile, Globals.obSettings);
-            _ = MessageBox.Show("Impostazioni salvate correttamente");
+            _ = MessageBox.Show("Impostazioni salvate correttamente", "OB ONE M2");
         }
 
         private void resetButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di OpenBullet??", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di OpenBullet?", "OB ONE M2", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Globals.obSettings.Reset();
             }

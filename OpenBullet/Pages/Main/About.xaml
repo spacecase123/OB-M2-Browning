@@ -8,22 +8,25 @@
       d:DesignHeight="550" d:DesignWidth="780"
       Title="About">
 
-    <Grid HorizontalAlignment="Center" Background="Black" Margin="10,0,10,0.4" Width="760">
+    <Grid HorizontalAlignment="Center" Margin="10,0,10,0.4" Width="760">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="58*"/>
-            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" MinHeight="350.4" />
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+            <RowDefinition Height="58.4" />
         </Grid.RowDefinitions>
+        <WrapPanel Margin="0,200,0,0.4">
+            <WrapPanel Height="147" Width="760" >
+                <WrapPanel.Background>
+                    <ImageBrush ImageSource="area51crew-960x569_ rosso.png"/>
+                </WrapPanel.Background>
+            </WrapPanel>
+        </WrapPanel>
 
-        <StackPanel Grid.Row="0" Margin="0,0,-0.2,0">
-            <TextBlock
-                   FontSize="36" 
-                   TextWrapping="Wrap" 
-                   Foreground="{DynamicResource ForegroundMain}" Margin="10,25,10,0" HorizontalAlignment="Center" FontFamily="Tempus Sans ITC"><Run Text="Area51Crew"/></TextBlock>
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="10,0,9.8,0.4">
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="0,10,0,0.4" HorizontalAlignment="Left" Width="335">
             <Button x:Name="repoButton" Click="repoButton_Click" Margin="0 5">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Images/Icons/git.png" Width="20" />
@@ -36,7 +39,7 @@
                     <TextBlock VerticalAlignment="Center" Margin="5 0">GUIDA</TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="donateButton_Copy" Click="donateButton_Click" Margin="0,5,0,0" Width="134" HorizontalAlignment="Right" RenderTransformOrigin="0,0" Height="40" VerticalAlignment="Top">
+            <Button x:Name="donateButton_Copy" Click="donateButton_Click" Margin="0 5">
                 <Button.OpacityMask>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -49,54 +52,54 @@
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="48,73.2,13,69.8" VerticalAlignment="Center" Height="77" HorizontalAlignment="Center" Width="699">
-            <Button x:Name="telegramButton" Click="telegramButton_Click" Margin="0,5,0,5.8" Width="95" Height="66.4">
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Width="760" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,34.6,0,34" Height="73">
+            <Button x:Name="telegramButton" Click="telegramButton_Click" Margin="0,5,0,5.8" Width="95">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/git.png" Width="20" />
                     <TextBlock VerticalAlignment="Center" Margin="5 0"><Run Text="Telegram"/></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="discordButton" Click="discordButton_Click" Margin="0,5,0,5.4" Width="95">
+            <Button x:Name="discordButton" Click="discordButton_Click" Margin="0,5,0,5.8" Width="95">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/git.png" Width="20" />
                     <TextBlock VerticalAlignment="Center" Margin="5 0"><Run Text="Discord"/></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="SiteButton" Click="siteButton_Click" Margin="0,5,0,5.4" Width="95">
+            <Button x:Name="SiteButton" Click="siteButton_Click" Margin="0,5,0,5.8" Width="96">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/new.png" Width="20" />
                     <TextBlock VerticalAlignment="Center" Margin="5 0"><Run Text="Site"/></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="forumButton" Click="forumButton_Click" Margin="0,5,0,5.4" Width="95" HorizontalAlignment="Center">
+            <Button x:Name="forumButton" Click="forumButton_Click" Margin="0,5,0,5.8" Width="96">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/log.png" Width="20" />
                     <TextBlock VerticalAlignment="Center" Margin="5 0"><Run Text="Forum"/></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="softwareButton" Click="softwareButton_Click" Margin="0,5,0,5.4" Width="95">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center" Margin="5 0" Height="19" Width="73"><Run Text="Cloud"/><Run Text=" "/><Run Text="32"/><Run Text=" "/><Run Text="T"/><Run Text="B"/></TextBlock>
-                </StackPanel>
-            </Button>
-            <Button x:Name="platformButton" Click="platformButton_Click" Margin="0,5,0,5.4" Width="95">
+            <Button x:Name="platformButton" Click="platformButton_Click" Margin="0,5,0,5.8" Width="96">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/search.png" Width="20" />
                     <TextBlock VerticalAlignment="Center" Margin="5 0"><Run Text="Platform"/></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="genButton" Click="genButton_Click" Margin="0,5,0,5.4" Width="95">
+            <Button x:Name="genButton" Click="genButton_Click" Margin="0,5,0,5.8" Width="96">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Center" Margin="5 0" Height="33" Width="53" RenderTransformOrigin="0.779,0.425" HorizontalAlignment="Center" TextAlignment="Center"><Run FontSize="12" Text="Gen"/><Run FontSize="12" Text="erator"/><LineBreak/><Run FontSize="12" Text="G"/><Run FontSize="12" Text="old"/></TextBlock>
                 </StackPanel>
             </Button>
+            <Button x:Name="softwareButton" Click="softwareButton_Click" Width="184" Margin="0,5,0,5.8">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Margin="5 0" Height="19" Width="140" Text="AreA 51 Crew Cloud 64 TB"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
+        <TextBlock 
+            TextWrapping="Wrap" 
+            Foreground="#FFF6F700" Margin="585,22,13,17.4" Grid.Row="4" Width="162" Height="19" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Author Ruri - mod"/><Run Text="."/><Run Text="  NioBrain "/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
         <TextBlock
             FontSize="18" 
             TextWrapping="Wrap" 
-            Foreground="#FFF6F700" Margin="10,10,10,134.8" FontFamily="Tempus Sans ITC" Grid.Row="1" Width="737" VerticalAlignment="Center" HorizontalAlignment="Center" Height="64" TextAlignment="Center"><Run/><LineBreak/><Run Text="in collaborazione con "/><Run Text="♕𝕘𝕖𝕟𝕖𝕣𝕒𝕥𝕠𝕣𝕘𝕠𝕝𝕕♕"/><Run Text=" "/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
-        <TextBlock 
-            TextWrapping="Wrap" 
-            Foreground="#FFF6F700" Margin="585,20.2,13,10.4" Grid.Row="3" Width="162" Height="19" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Author Ruri - mod"/><Run Text="."/><Run Text="  NioBrain "/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
+            Foreground="#FFF6F700" Margin="12,10,12,213.4" FontFamily="Tempus Sans ITC" Width="736" VerticalAlignment="Center" HorizontalAlignment="Center" Height="127" TextAlignment="Center"><Run/><LineBreak/><Run FontSize="25" Text="Area51Crew"/><LineBreak/><Run/><LineBreak/><Run Text="in collaborazione con "/><Run Text="♕𝕘𝕖𝕟𝕖𝕣𝕒𝕥𝕠𝕣𝕘𝕠𝕝𝕕♕"/><Run Text=" "/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
     </Grid>
 </Page>

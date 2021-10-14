@@ -392,6 +392,8 @@
     <Compile Include="Pages\Main\Tools\ToolsSeleniumTools.xaml.cs">
       <DependentUpon>ToolsSeleniumTools.xaml</DependentUpon>
     </Compile>
+    <Compile Include="title.cs" />
+    <Compile Include="Title1.cs" />
     <Compile Include="ViewModels\OBSettingsViewModel.cs" />
     <Compile Include="Snowflake.xaml.cs">
       <DependentUpon>Snowflake.xaml</DependentUpon>
@@ -883,6 +885,9 @@
     <Resource Include="Images\Logo.png" />
     <Resource Include="Images\LogoInverted.png" />
     <Resource Include="Images\Icons\Kofi.png" />
+    <Resource Include="Pages\Main\116-1161536_label-premium-quality-logo-png-transparent-png.png" />
+    <Resource Include="Pages\Main\CMT.png" />
+    <Resource Include="Pages\Main\area51crew-960x569_ rosso.png" />
     <Content Include="Sounds\rifle_hit.wav" />
     <Content Include="Sounds\rifle_reload.wav" />
   </ItemGroup>
