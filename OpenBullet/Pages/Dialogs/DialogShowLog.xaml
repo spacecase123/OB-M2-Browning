@@ -30,9 +30,9 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="Search:" VerticalAlignment="Center"/>
+            <Label Grid.Column="0" Content="Cerca:" VerticalAlignment="Center"/>
             <TextBox Grid.Column="1" Text="{Binding SearchString}"/>
-            <Button Grid.Column="2" x:Name="searchButton" Content="Go" Click="searchButton_Click" />
+            <Button Grid.Column="2" x:Name="searchButton" Content="Vai" Click="searchButton_Click" />
             <Image Grid.Column="3" x:Name="previousMatchButton" Source="/Images/Icons/left.png" Margin="5 0" Width="20" Height="20" MouseDown="previousMatchButton_MouseDown" />
             <Label Grid.Column="4" Content="{Binding CurrentSearchMatch}"/>
             <Label Grid.Column="5" Content="of"/>

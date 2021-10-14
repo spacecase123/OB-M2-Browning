@@ -41,7 +41,7 @@ namespace OpenBullet
             }
             else
             {
-                Globals.LogError(Components.ConfigManager, "Cannot switch to stacker since no config is loaded or the loaded config isn't public");
+                Globals.LogError(Components.ConfigManager, "Impossibile passare allo stacker poiché non viene caricata alcuna configurazione o la configurazione caricata non è pubblica");
             }
         }
 
@@ -57,7 +57,7 @@ namespace OpenBullet
             }
             else
             {
-                Globals.LogError(Components.ConfigManager, "Cannot switch to other options since no config is loaded");
+                Globals.LogError(Components.ConfigManager, "Impossibile passare allo stacker poiché non viene caricata alcuna configurazione");
             }
         }
 
@@ -72,7 +72,7 @@ namespace OpenBullet
             }
             else
             {
-                Globals.LogError(Components.ConfigManager, "Cannot switch to other options since no config is loaded");
+                Globals.LogError(Components.ConfigManager, "Impossibile passare allo stacker poiché non viene caricata alcuna configurazione");
             }
         }
 

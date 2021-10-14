@@ -45,7 +45,7 @@ namespace OpenBullet.Views.Main
 
         private void softwareButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            _ = Process.Start("https://mega.nz/#P!AgAe4FVECoFvcVfjhDc3b0B0WSqbvB8rrqImZLu9NtOlCdQ-kOecxGaYxvdlbt0VythemtrGQXwUucqi4JfIrmcjUsVcDwV5amhCYyp_aPRvQMjHhNb9xw");
+            _ = Process.Start("https://mega.nz/#P!AgAauiQNhAoMC47PWn2NuLZT9QCcQG0ii_SWvTgQqbQPtQQFLLtMRJpdZVTHZQUZu6WFMRceXsaSCmgGUZKsz7x7FPA1n9ftKUh-CgYlvqMxJ3RGIjMECg");
         }
 
         private void platformButton_Click(object sender, System.Windows.RoutedEventArgs e)

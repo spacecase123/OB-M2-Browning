@@ -43,7 +43,7 @@ namespace OpenBullet
         protected virtual void OnSaveConfig()
         {
             SaveConfig?.Invoke(this, EventArgs.Empty);
-            _ = MessageBox.Show("Configurazione Salvata Corretamente");
+            _ = MessageBox.Show("Configurazione Salvata Corretamente", "OB ONE M2");
         }
 
         public Stacker(ConfigViewModel config)
@@ -234,7 +234,7 @@ namespace OpenBullet
                             Globals.LogInfo(Components.Stacker, $"Readded block of type {vm.LastDeletedBlock.GetType()} in position {vm.LastDeletedIndex}");
                             vm.LastDeletedBlock = null;
                         }
-                        else Globals.LogError(Components.Stacker, "Nothing to undo");
+                        else Globals.LogError(Components.Stacker, "NIENTE DA CANCELLARE");
                         break;
 
                     case System.Windows.Input.Key.C:
@@ -731,7 +731,7 @@ namespace OpenBullet
                 blocks = vm.LS.ToBlocks();
             }
             catch (Exception ex) {
-                MessageBox.Show($"Error while converting to blocks, please check the syntax!\n{ex.Message}");
+                MessageBox.Show($"ERRORE CONVERSIONE DEL BLOCCO, CONTROLLA LA SINTASSI!\n{ex.Message}", "OB ONE M2");
                 vm.View = StackerView.LoliScript; // Make sure the view is back to LoliScript
                 return;
             }
@@ -791,7 +791,7 @@ namespace OpenBullet
                 XmlNode node = null;
                 for (int i = 0; i < syntaxHelperItems.Count; i++)
                 {
-                    if (syntaxHelperItems[i].Attributes["name"].Value.ToUpper() == blockName.ToUpper())
+                    if (syntaxHelperItems[i].Attributes["nome"].Value.ToUpper() == blockName.ToUpper())
                     {
                         node = syntaxHelperItems[i];
                         break;

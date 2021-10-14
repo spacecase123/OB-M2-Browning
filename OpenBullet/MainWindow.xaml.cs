@@ -52,7 +52,7 @@ namespace OpenBullet
         public MainWindow()
         {
             // Clean or create log file
-            File.WriteAllText(Globals.logFile, "");
+            File.WriteAllText(Globals.logFile, "Log.txt");
 
             InitializeComponent();
 

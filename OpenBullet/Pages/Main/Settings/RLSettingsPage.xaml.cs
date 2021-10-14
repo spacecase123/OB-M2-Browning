@@ -64,12 +64,12 @@ namespace OpenBullet.Pages.Main.Settings
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             IOManager.SaveSettings(Globals.rlSettingsFile, Globals.rlSettings);
-            _ = MessageBox.Show("Opzioni Salvate");
+            _ = MessageBox.Show("Opzioni Salvate", "OB ONE M2");
         }
 
         private void resetButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di RuriLib?", "Conferma", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di RuriLib?", "OB ONE M2", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Globals.rlSettings.Reset();
             }

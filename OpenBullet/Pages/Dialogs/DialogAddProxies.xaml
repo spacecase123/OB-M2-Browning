@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <Label Content="Import from:" />
+            <Label Content="Importa da:" />
             <Label x:Name="fileMode" Content="File" FontWeight="Bold" Foreground="{DynamicResource ForegroundMenuSelected}" MouseDown="FileMode_MouseDown" />
             <Label x:Name="pasteMode" Content="Paste" FontWeight="Bold" MouseDown="PasteMode_MouseDown" />
             <Label x:Name="apiMode" Content="API" FontWeight="Bold" MouseDown="ApiMode_MouseDown" />
@@ -37,7 +37,7 @@
                             <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Label Grid.Column="0" Content="Location:" VerticalAlignment="Center"/>
+                        <Label Grid.Column="0" Content="Percorso:" VerticalAlignment="Center"/>
                         <TextBox x:Name="locationTextbox" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" IsReadOnly="True"/>
                         <Image x:Name="loadProxiesButton" Grid.Column="2" Source="/Images/Icons/folder.png" Width="20" MouseDown="loadProxiesButton_MouseDown"/>
                     </Grid>
@@ -81,7 +81,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock x:Name="advancedWarning" Grid.Row="0" Grid.ColumnSpan="2" FontFamily="Consolas" Margin="5">
-                <Span Foreground="{DynamicResource ForegroundMain}" FontWeight="Bold">Advanced Syntax:</Span>
+                <Span Foreground="{DynamicResource ForegroundMain}" FontWeight="Bold">Sintassi Avanzata:</Span>
                 <LineBreak/>
                 <Span Foreground="{DynamicResource ForegroundMain}">Type: (http)1.1.1.1:80</Span>
                 <LineBreak/>
@@ -89,10 +89,10 @@
                 <LineBreak/>
                 <Span Foreground="{DynamicResource ForegroundMain}">Chain: 1.1.1.1:80 -> 2.2.2.2:80</Span>
                 <LineBreak/>
-                <Span Foreground="{DynamicResource ForegroundCustom}">Auth and Chain won't work with Selenium</Span>
+                <Span Foreground="{DynamicResource ForegroundCustom}">Auth e Chain non Funzionano con Selenium</Span>
             </TextBlock>
 
-            <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Defaults (when not specified):" />
+            <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Defaults (quando non specificato):" />
 
             <Label Grid.Column="0" Grid.Row="2" Content="Type:" VerticalAlignment="Center"/>
             <ComboBox x:Name="proxyTypeCombobox" Grid.Column="1" Grid.Row="2" Margin="5"/>
