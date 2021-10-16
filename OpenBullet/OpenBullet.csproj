@@ -164,6 +164,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Telegram.Bot">
+      <HintPath>..\..\..\Github Repo\Silverbullet\packages\Telegram.Bot.15.7.1\lib\net45\Telegram.Bot.dll</HintPath>
+    </Reference>
     <Reference Include="Tesseract, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tesseract.3.3.0\lib\net45\Tesseract.dll</HintPath>
     </Reference>
