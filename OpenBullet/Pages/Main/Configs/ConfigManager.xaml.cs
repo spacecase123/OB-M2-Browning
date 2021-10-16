@@ -151,7 +151,7 @@ namespace OpenBullet
 
             Current.Config.Script = stacker.LS.Script;
 
-            Globals.LogInfo(Components.ConfigManager, $"Saving config {vm.CurrentConfigName}");
+            Globals.LogInfo(Components.ConfigManager, $"Salvando la Configurazione {vm.CurrentConfigName}");
 
             Current.Config.Settings.LastModified = DateTime.Now;
             Current.Config.Settings.Version = Globals.obVersion;
@@ -172,7 +172,7 @@ namespace OpenBullet
         
         private void deleteConfigsButton_Click(object sender, RoutedEventArgs e)
         {
-            Globals.LogWarning(Components.ConfigManager, "Deletion initiated, prompting warning");
+            Globals.LogWarning(Components.ConfigManager, "Eliminazione iniziata, prompting warning");
             if (MessageBox.Show("Questo eliminerà i file fisici dal tuo disco! Sei sicuro di voler continuare?", "WARNING", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 foreach(ConfigViewModel config in configsListView.SelectedItems)
@@ -202,7 +202,7 @@ namespace OpenBullet
         {
             if (!CheckSaved())
             {
-                Globals.LogWarning(Components.Stacker, "Config not saved, prompting quit confirmation");
+                Globals.LogWarning(Components.Stacker, "Configurazione Non Salvata, prompting di Chiusura");
                 if (MessageBox.Show("La configurazione in Stacker non è stata salvata.\nSei sicuro di voler creare una nuova configurazione?",
                     "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
                 {

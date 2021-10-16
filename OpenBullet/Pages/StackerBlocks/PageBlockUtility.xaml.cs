@@ -2,6 +2,7 @@
 using RuriLib.Functions.Conversions;
 using System;
 using System.Windows.Controls;
+using RuriLib.Functions.Conditions;
 
 namespace OpenBullet.Pages.StackerBlocks
 {
@@ -47,6 +48,13 @@ namespace OpenBullet.Pages.StackerBlocks
                 fileActionCombobox.Items.Add(a);
 
             fileActionCombobox.SelectedIndex = (int)block.FileAction;
+
+            foreach (var a in Enum.GetNames(typeof(FolderAction)))
+                folderActionCombobox.Items.Add(a);
+
+            folderActionCombobox.SelectedIndex = (int)block.FolderAction;
+
+
         }
 
         private void groupCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -73,6 +81,15 @@ namespace OpenBullet.Pages.StackerBlocks
 
                 case UtilityGroup.File:
                     groupTabControl.SelectedIndex = 4;
+                    break;
+               
+
+                case UtilityGroup.Telegram:
+                    groupTabControl.SelectedIndex = 6;
+                    break;
+
+                case UtilityGroup.Folder:
+                    groupTabControl.SelectedIndex = 5;
                     break;
             }
         }
@@ -128,6 +145,11 @@ namespace OpenBullet.Pages.StackerBlocks
             block.FileAction = (FileAction)((ComboBox)e.OriginalSource).SelectedIndex;
         }
 
+        private void folderActionCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            block.FolderAction = (int)(FolderAction)((ComboBox)e.OriginalSource).SelectedIndex;
+        }
+
         private void varActionCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             block.VarAction = (VarAction)((ComboBox)e.OriginalSource).SelectedIndex;
@@ -143,5 +165,21 @@ namespace OpenBullet.Pages.StackerBlocks
                     break;
             }
         }
+
+        private void TelegramActionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (null == block)
+            {
+                return;
+            }
+
+            block.TelegramAction = (TelegramAction)((ComboBox)e.OriginalSource).SelectedIndex;
+        }
+
+        private void messageRTB_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            block.SetMessages(messageRTB.Lines());
+        }
+
     }
 }

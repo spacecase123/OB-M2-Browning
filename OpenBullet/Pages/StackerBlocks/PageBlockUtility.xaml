@@ -1,12 +1,35 @@
-﻿<Page x:Class="OpenBullet.Pages.StackerBlocks.PageBlockUtility"
+﻿<Page 
+      x:Class="OpenBullet.Pages.StackerBlocks.PageBlockUtility"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:OpenBullet.Pages.StackerBlocks"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:ruriLib="clr-namespace:RuriLib;assembly=RuriLib"
+      xmlns:tlgEnums="clr-namespace:Telegram.Bot.Types.Enums;assembly=Telegram.Bot"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="400"
+      d:DesignHeight="500" 
+      d:DesignWidth="400"
       Title="PageBlockUtility">
+
+    <Page.Resources>
+        <ObjectDataProvider
+            x:Key="ParseModes"
+            MethodName="GetValues"
+            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="tlgEnums:ParseMode" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider
+            x:Key="TelegramActions"
+            MethodName="GetValues"
+            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="ruriLib:TelegramAction" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -26,10 +49,14 @@
             </DockPanel>
         </StackPanel>
 
-        <TabControl x:Name="groupTabControl" Grid.Row="1" Background="Transparent" BorderThickness="0">
+        <TabControl
+            x:Name="groupTabControl"
+            Grid.Row="1"
+            Background="Transparent"
+            BorderThickness="0">
             <TabControl.ItemContainerStyle>
                 <Style TargetType="{x:Type TabItem}">
-                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Setter Property="Visibility" Value="Collapsed" />
                 </Style>
             </TabControl.ItemContainerStyle>
             <TabItem x:Name="emptyTab">
@@ -108,7 +135,6 @@
 
                 </StackPanel>
             </TabItem>
-
             <TabItem x:Name="varTab">
                 <StackPanel>
                     <DockPanel>
@@ -143,10 +169,8 @@
                             </StackPanel>
                         </TabItem>
                     </TabControl>
-
                 </StackPanel>
             </TabItem>
-
             <TabItem x:Name="conversionTab">
                 <StackPanel>
                     <TextBox Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}" />
@@ -170,12 +194,86 @@
                         <Label Content="Path:" DockPanel.Dock="Left"/>
                         <TextBox Text="{Binding FilePath, UpdateSourceTrigger=PropertyChanged}" />
                     </DockPanel>
-                    <Label Foreground="{DynamicResource ForegroundCustom}" Content="Path can be relative or absolute" />
+                    <Label Foreground="{DynamicResource ForegroundCustom}" Content="Il percorso può essere relativo o assoluto" />
                     <DockPanel>
                         <Label Content="Input String:" DockPanel.Dock="Left" />
                         <TextBox Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}" />
                     </DockPanel>
-                    <Label Foreground="{DynamicResource ForegroundCustom}" Content="Newline escape sequences will be evaluated. &quot;Lines&quot; accept LIST[*]." />
+                    <Label Foreground="{DynamicResource ForegroundCustom}" Content="Verranno valutate le sequenze di escape newline. &quot;Lines&quot; accept LIST[*]." />
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="folderTab">
+                <StackPanel>
+                    <DockPanel>
+                        <Label
+                            Content="Action:"
+                            DockPanel.Dock="Left" />
+                        <ComboBox
+                            x:Name="folderActionCombobox"
+                            SelectionChanged="folderActionCombobox_SelectionChanged" />
+                    </DockPanel>
+                    <DockPanel>
+                        <Label
+                            Content="Path:"
+                            DockPanel.Dock="Left" />
+                        <TextBox Text="{Binding FolderPath, UpdateSourceTrigger=PropertyChanged}" />
+                    </DockPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="telegramTab">
+                <StackPanel>
+                    <DockPanel>
+                        <Label
+                            Content="Action:"
+                            DockPanel.Dock="Left" />
+                        <ComboBox
+                            x:Name="telegramActionCombobox"
+                            ItemsSource="{Binding Source={StaticResource TelegramActions}}"
+                            SelectedIndex="0"
+                            SelectionChanged="TelegramActionComboBox_SelectionChanged" />
+                    </DockPanel>
+                    <DockPanel>
+                        <Label Content="Bot Token:"  />
+                        <TextBox Text="{Binding BotToken}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <Label Content="Chat Id:" />
+                        <TextBox
+                            Margin="20,0,0,0"
+                            Text="{Binding ChatId}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <Label
+                            VerticalAlignment="Top"
+                            Content="Message:" />
+                        <RichTextBox
+                            x:Name="messageRTB"
+                            MaxHeight="203"
+                            Margin="12,0,0,0"
+                            Background="{DynamicResource BackgroundMain}"
+                            BorderBrush="{DynamicResource AccordionBorderBrush}"
+                            FontSize="12.5"
+                            Foreground="{DynamicResource ForegroundMain}"
+                            HorizontalScrollBarVisibility="Auto"
+                            LostFocus="messageRTB_LostFocus"
+                            VerticalScrollBarVisibility="Auto">
+                            <RichTextBox.Resources>
+                                <Style TargetType="{x:Type Paragraph}">
+                                    <Setter Property="Margin" Value="0,0,0,0" />
+                                    <Setter Property="Padding" Value="0,1,0,0" />
+                                </Style>
+                            </RichTextBox.Resources>
+                        </RichTextBox>
+                    </DockPanel>
+                    <DockPanel>
+                        <Label
+                            Margin="-1,0,0,0"
+                            Content="ParseMode:" />
+                        <ComboBox
+                            ItemsSource="{Binding Source={StaticResource ParseModes}}"
+                            SelectedIndex="0"
+                            SelectedItem="{Binding ParseMode}"/>
+                    </DockPanel>
                 </StackPanel>
             </TabItem>
         </TabControl>
