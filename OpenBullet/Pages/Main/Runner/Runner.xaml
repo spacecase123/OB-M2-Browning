@@ -19,6 +19,7 @@
             <MenuItem x:Name="selectAll" Header="Select All" Click="selectAll_Click"/>
             <MenuItem x:Name="showHTML" Header="Show Last Response in Browser" Click="showHTML_Click"/>
             <MenuItem x:Name="showLog" Header="Show Full Log" Click="showLog_Click"/>
+            <MenuItem x:Name="copySelectedCaptureOnly" Header="Copy Selected Capture" Click="copySelectedCaptureOnly_Click"/>
         </ContextMenu>
     </Page.Resources>
 
