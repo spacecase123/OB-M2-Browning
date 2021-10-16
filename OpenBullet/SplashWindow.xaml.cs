@@ -15,7 +15,7 @@ namespace OpenBullet
 
     public partial class SplashWindow : Window
     {
-        public string CurrentVersion = "1.0.2".Trim();
+        public string CurrentVersion = "1.0.3".Trim();
     
 
         // URL for the Changelog
