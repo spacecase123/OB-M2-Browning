@@ -404,6 +404,20 @@ namespace OpenBullet
             catch (Exception ex) { Globals.LogError(Components.Runner, $"Eccezione durante la copia dei dati - {ex.Message}"); }
         }
 
+        private void copySelectedCaptureOnly_Click(object sender, RoutedEventArgs e)
+        {
+            var clipboardText = "";
+            try
+            {
+                foreach (ValidData selected in GetCurrentListView().SelectedItems)
+                    clipboardText += selected.CapturedData + Environment.NewLine;
+
+                Globals.LogInfo(Components.Runner, $"Copied {GetCurrentListView().SelectedItems.Count} data");
+                Clipboard.SetText(clipboardText);
+            }
+            catch (Exception ex) { Globals.LogError(Components.Runner, $"Exception while copying data - {ex.Message}"); }
+        }
+
         private void copySelectedCapture_Click(object sender, RoutedEventArgs e)
         {
             var clipboardText = "";
