@@ -91,7 +91,7 @@
             <TextBox x:Name="ChangeLogBox" Height="106" TextWrapping="Wrap" Text="ChangeLog:" Margin="20,0,19,0" TextChanged="TextBox_TextChanged" VerticalAlignment="Top" TextAlignment="Left" BorderBrush="#FF18FA00" />
 
         </StackPanel>
-        <Label x:Name="titleLabel" Content="OB ONE M2 BrowninG 1.0.3" FontFamily="pack://application:,,,/Fonts/#Century Gothic" FontSize="14" Margin="0,-5,10,770" Background="{x:Null}" Foreground="#FF4FF603" Grid.ColumnSpan="2" />
+        <Label x:Name="titleLabel" Content="OB ONE M2 BrowninG" FontFamily="pack://application:,,,/Fonts/#Century Gothic" FontSize="14" Margin="0,-5,10,770" Background="{x:Null}" Foreground="#FF4FF603" Grid.ColumnSpan="2" />
         <Image
                 Source="Images/Logo.png"
                 Margin="106,35,108,490" Grid.Column="1" />

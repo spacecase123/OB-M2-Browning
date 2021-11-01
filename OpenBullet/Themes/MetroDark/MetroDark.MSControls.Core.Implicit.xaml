@@ -88,7 +88,7 @@
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="{x:Type RepeatButton}">
-          <Rectangle Fill="{StaticResource TransparentBrush}" />
+          <Rectangle Fill="{StaticResource TransparentBrush}" RadiusX="1" RadiusY="1" />
         </ControlTemplate>
       </Setter.Value>
     </Setter>
@@ -355,8 +355,8 @@
             <ContentControl x:Name="ContentControl" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
               <ContentPresenter x:Name="contentPresenter" />
             </ContentControl>
-            <Rectangle x:Name="FocusedVisualElement" Stroke="{StaticResource ButtonPressedBorderBrush}" Visibility="Collapsed" StrokeThickness="2" />
-            <Rectangle x:Name="DisabledVisualElement" Fill="{StaticResource DisabledVisualElement}" Visibility="Collapsed" />
+            <Rectangle x:Name="FocusedVisualElement" Stroke="{StaticResource ButtonPressedBorderBrush}" Visibility="Collapsed" StrokeThickness="2" RadiusX="2" RadiusY="2" />
+            <Rectangle x:Name="DisabledVisualElement" Fill="{StaticResource DisabledVisualElement}" Visibility="Collapsed" RadiusX="2" RadiusY="2" />
           </Grid>
         </ControlTemplate>
       </Setter.Value>
@@ -390,12 +390,12 @@
             <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" MinHeight="8" MinWidth="8">
               <Grid>
                 <StackPanel x:Name="HGrip" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
-                  <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="1" Margin="1,2,1,1" StrokeThickness="0" Width="20" />
-                  <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="1" Margin="1,1,1,2" StrokeThickness="0" Width="20" />
+                                    <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="1" Margin="1,2,1,1" StrokeThickness="0" Width="20" RadiusX="2" RadiusY="2" />
+                                    <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="1" Margin="1,1,1,2" StrokeThickness="0" Width="20" RadiusX="2" RadiusY="2" />
                 </StackPanel>
                 <StackPanel x:Name="VGrip" Width="8" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Visibility="Collapsed">
-                  <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="20" Margin="2,1,1,1" StrokeThickness="0" Width="1" />
-                  <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="20" Margin="1,1,2,1" StrokeThickness="0" Width="1" />
+                                    <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="20" Margin="2,1,1,1" StrokeThickness="0" Width="1" RadiusX="2" RadiusY="2" />
+                                    <Rectangle Fill="{StaticResource GlyphBackgroundBrush}" Height="20" Margin="1,1,2,1" StrokeThickness="0" Width="1" RadiusX="2" RadiusY="2" />
                 </StackPanel>
               </Grid>
             </Border>
@@ -442,15 +442,15 @@
               </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
             <Border x:Name="ProgressBarTrack" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" />
-            <Rectangle x:Name="PART_Track" Margin="{TemplateBinding BorderThickness}" />
+                        <Rectangle x:Name="PART_Track" Margin="{TemplateBinding BorderThickness}" RadiusX="2" RadiusY="2"/>
             <Decorator x:Name="PART_Indicator" HorizontalAlignment="Left" Margin="{TemplateBinding BorderThickness}">
               <Grid x:Name="Foreground">
-                <Rectangle x:Name="Indicator" Fill="{TemplateBinding Foreground}" />
+                                <Rectangle x:Name="Indicator" Fill="{TemplateBinding Foreground}" RadiusX="2" RadiusY="2" />
               </Grid>
             </Decorator>
             <Grid x:Name="IndeterminateRoot" Visibility="Collapsed">
-              <Rectangle x:Name="IndeterminateSolidFill" Fill="{TemplateBinding Foreground}" Margin="{TemplateBinding BorderThickness}" Opacity="1" RenderTransformOrigin="0.5,0.5" StrokeThickness="0" />
-              <Rectangle x:Name="IndeterminateGradientFill" Fill="{StaticResource ProgressBarIndeterminateBackgroundBrush}" Margin="{TemplateBinding BorderThickness}" StrokeThickness="1" />
+              <Rectangle x:Name="IndeterminateSolidFill" Fill="{TemplateBinding Foreground}" Margin="{TemplateBinding BorderThickness}" Opacity="1" RenderTransformOrigin="0.5,0.5" StrokeThickness="0" RadiusX="2" RadiusY="2" />
+              <Rectangle x:Name="IndeterminateGradientFill" Fill="{StaticResource ProgressBarIndeterminateBackgroundBrush}" Margin="{TemplateBinding BorderThickness}" StrokeThickness="1" RadiusX="2" RadiusY="2" />
             </Grid>
           </Grid>
           <ControlTemplate.Triggers>
@@ -496,9 +496,9 @@
       <Setter.Value>
         <ControlTemplate TargetType="{x:Type PasswordBox}">
           <Grid>
-            <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" />
-            <Border x:Name="DisabledVisualElement" BorderBrush="{StaticResource DisabledVisualElement}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource DisabledVisualElement}" IsHitTestVisible="False" Opacity="0" />
-            <Border x:Name="ReadOnlyVisualElement" Background="{StaticResource TextBoxReadOnlyBackgroundBrush}" Opacity="0" />
+                        <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
+            <Border x:Name="DisabledVisualElement" BorderBrush="{StaticResource DisabledVisualElement}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource DisabledVisualElement}" IsHitTestVisible="False" Opacity="0" CornerRadius="5" />
+            <Border x:Name="ReadOnlyVisualElement" Background="{StaticResource TextBoxReadOnlyBackgroundBrush}" Opacity="0" CornerRadius="5" />
             <Border>
               <ScrollViewer x:Name="PART_ContentHost" />
             </Border>
@@ -540,7 +540,7 @@
       <Setter.Value>
         <ControlTemplate TargetType="ToolTip">
           <Grid>
-            <Rectangle Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" StrokeThickness="{TemplateBinding BorderThickness}" />
+            <Rectangle Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" StrokeThickness="{TemplateBinding BorderThickness}" RadiusX="5" RadiusY="5" />
             <StackPanel Orientation="Horizontal" d:LayoutOverrides="Width, Height">
               <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" />
             </StackPanel>
@@ -571,7 +571,7 @@
                     </TransformGroup.Children>
                   </TransformGroup>
                 </Grid.LayoutTransform>
-                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" />
+                                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" RadiusX="2" RadiusY="2" />
                 <Path x:Name="arrow" Width="10" Height="6" Fill="{StaticResource GlyphBackgroundBrush}" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Stretch="Fill" RenderTransformOrigin="0.5, 0.5" />
               </Grid>
               <ContentPresenter HorizontalAlignment="Center" Margin="0,4,0,0" Grid.Row="1" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Stretch" />
@@ -618,7 +618,7 @@
                     </TransformGroup.Children>
                   </TransformGroup>
                 </Grid.LayoutTransform>
-                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" />
+                                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" RadiusX="2" RadiusY="2" />
                 <Path x:Name="arrow" Width="10" Height="6" Fill="{StaticResource GlyphBackgroundBrush}" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Stretch="Fill" RenderTransformOrigin="0.5, 0.5" />
               </Grid>
               <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center" />
@@ -665,7 +665,7 @@
                     </TransformGroup.Children>
                   </TransformGroup>
                 </Grid.LayoutTransform>
-                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" />
+                                <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" RadiusX="2" RadiusY="2"/>
                 <Path x:Name="arrow" Width="10" Height="6" Fill="{StaticResource GlyphBackgroundBrush}" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Stretch="Fill" RenderTransformOrigin="0.5, 0.5" />
               </Grid>
               <ContentPresenter Grid.Row="1" HorizontalAlignment="Center" Margin="0,4,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Stretch" />
@@ -702,7 +702,7 @@
                 <ColumnDefinition Width="30" />
                 <ColumnDefinition Width="*" />
               </Grid.ColumnDefinitions>
-              <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" />
+                            <Rectangle x:Name="rectangle" Width="30" Height="30" Fill="{StaticResource ExpanderButtonBackgroundBrush}" HorizontalAlignment="Center" Stroke="{StaticResource ExpanderButtonBorderBrush}" VerticalAlignment="Center" RadiusX="2" RadiusY="2"/>
               <Path x:Name="arrow" Width="10" Height="6" Fill="{StaticResource GlyphBackgroundBrush}" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Stretch="Fill" RenderTransformOrigin="0.5, 0.5" />
               <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center" />
             </Grid>
@@ -740,7 +740,7 @@
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="{x:Type Expander}">
-          <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="true">
+          <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="5" SnapsToDevicePixels="true">
             <DockPanel>
               <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" Style="{StaticResource ExpanderDownHeaderStyle}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
               <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Visibility="Collapsed" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
@@ -874,16 +874,16 @@
                 <VisualState x:Name="Unfocused" />
               </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-            <Rectangle x:Name="Bd" Fill="{StaticResource ButtonBackgroundBrush}" Stroke="{StaticResource ButtonBorderBrush}" StrokeThickness="1" />
-            <Rectangle x:Name="checked" Fill="{StaticResource ButtonPressedBackgroundBrush}" Stroke="{StaticResource ButtonPressedBorderBrush}" StrokeThickness="1" Visibility="Collapsed" />
+            <Rectangle x:Name="Bd" Fill="{StaticResource ButtonBackgroundBrush}" Stroke="{StaticResource ButtonBorderBrush}" StrokeThickness="1" RadiusX="2" RadiusY="2" />
+            <Rectangle x:Name="checked" Fill="{StaticResource ButtonPressedBackgroundBrush}" Stroke="{StaticResource ButtonPressedBorderBrush}" StrokeThickness="1" Visibility="Collapsed" RadiusX="2" RadiusY="2" />
             <ContentControl x:Name="contentControl" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}">
               <ContentPresenter x:Name="contentPresenter" />
             </ContentControl>
             <ContentControl x:Name="contentControl1" Visibility="Collapsed" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}" Foreground="{StaticResource ForegroundBrush}">
               <ContentPresenter x:Name="contentPresenter1" />
             </ContentControl>
-            <Rectangle x:Name="FocusedVisualElement" Stroke="{StaticResource ButtonPressedBorderBrush}" Visibility="Collapsed" StrokeThickness="2" />
-            <Rectangle x:Name="DisabledVisualElement" Fill="{StaticResource DisabledVisualElement}" Visibility="Collapsed" />
+                        <Rectangle x:Name="FocusedVisualElement" Stroke="{StaticResource ButtonPressedBorderBrush}" Visibility="Collapsed" StrokeThickness="2" RadiusX="2" RadiusY="2" />
+                        <Rectangle x:Name="DisabledVisualElement" Fill="{StaticResource DisabledVisualElement}" Visibility="Collapsed" RadiusX="2" RadiusY="2" />
           </Grid>
         </ControlTemplate>
       </Setter.Value>
@@ -916,12 +916,12 @@
               <RowDefinition Height="*" />
               <RowDefinition Height="6" />
             </Grid.RowDefinitions>
-            <Border BorderBrush="{StaticResource TransparentBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" />
-            <Border x:Name="Header" Grid.Column="1" Padding="10,0,10,0" Grid.Row="0" Grid.RowSpan="2">
+            <Border BorderBrush="{StaticResource TransparentBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" CornerRadius="5" />
+            <Border x:Name="Header" Grid.Column="1" Padding="10,0,10,0" Grid.Row="0" Grid.RowSpan="2" CornerRadius="5">
               <ContentPresenter ContentSource="Header" Height="20" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
             </Border>
             <ContentPresenter Grid.ColumnSpan="2" Grid.Column="1" Margin="{TemplateBinding Padding}" Grid.Row="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-            <Border Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3">
+            <Border Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" CornerRadius="5">
               <Border.OpacityMask>
                 <MultiBinding ConverterParameter="7" Converter="{StaticResource BorderGapMaskConverter}">
                   <Binding ElementName="Header" Path="ActualWidth" />
@@ -929,7 +929,7 @@
                   <Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}" />
                 </MultiBinding>
               </Border.OpacityMask>
-              <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+              <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
               </Border>
             </Border>
           </Grid>

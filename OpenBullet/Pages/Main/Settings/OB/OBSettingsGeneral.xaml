@@ -11,12 +11,12 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="79*" />
-            <ColumnDefinition Width="79*" />
-            <ColumnDefinition Width="42*" />
+            <ColumnDefinition Width="316*" />
+            <ColumnDefinition Width="367*" />
+            <ColumnDefinition Width="117*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Margin="0,0,252,-0.4" Grid.ColumnSpan="2">
+        <StackPanel Grid.Column="0" Margin="0,0,250.2,-0.4" Grid.ColumnSpan="2">
             <CheckBox Content="Visualizza LoliScript al caricamento della config" IsChecked="{Binding DisplayLoliScriptOnLoad}" VerticalContentAlignment="Center" ToolTip="Click if you want the default view in Stacker to be LoliScript code" Margin="0,0,0.2,0"/>
             <CheckBox Content="Imposta Automaticamente i Bots Consigliati" IsChecked="{Binding RecommendedBots}" VerticalContentAlignment="Center"/>
             <CheckBox Content="Cambia Interfaccia del Runner (Restart)" IsChecked="{Binding ChangeRunnerInterface}" VerticalContentAlignment="Center" ToolTip="Whether to swap the log and the hits list in the UI" />
@@ -33,7 +33,7 @@
             <CheckBox Content="Disabilita Repository" IsChecked="{Binding DisableRepo}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Margin="5,0,0,-0.4" Grid.Column="1">
+        <StackPanel Margin="5,0,0.2,-0.4" Grid.Column="1">
             <DockPanel Margin="5">
                 <Label Content="Autore Predefinito:"/>
                 <TextBox Text="{Binding DefaultAuthor}" />

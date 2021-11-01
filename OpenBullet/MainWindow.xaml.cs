@@ -52,7 +52,7 @@ namespace OpenBullet
         public MainWindow()
         {
             // Clean or create log file
-            File.WriteAllText(Globals.logFile, "Log.txt");
+            File.WriteAllText(Globals.logFile, "");
 
             InitializeComponent();
 
@@ -63,7 +63,7 @@ namespace OpenBullet
             Globals.mainWindow = this;
 
             // Make sure all folders are there or recreate them
-            var folders = new string[] { "Captchas", "ChromeExtensions", "Configs", "DB", "Screenshots", "Settings", "Sounds", "Wordlists" };
+            var folders = new string[] { "Captchas", "ChromeExtensions", "Configs", "DB", "Screenshots", "Images", "Settings", "Sounds", "Wordlists" };
             foreach (var folder in folders.Select(f => System.IO.Path.Combine(Directory.GetCurrentDirectory(), f)))
             {
                 if (!Directory.Exists(folder))

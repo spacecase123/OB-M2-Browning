@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:OpenBullet"
       mc:Ignorable="d" 
       d:DesignHeight="550" d:DesignWidth="780"
-      Title="RunnerManager">
+      Title="RunnerManager" Foreground="{x:Null}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,7 +14,10 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="helpMessageLabel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Foreground="{DynamicResource ForegroundMain}" TextAlignment="Center" Text="Benvenuto in Open Bullet Mod by AreA51Crew" Height="94" Margin="114,218,114,198.4" />
+        <TextBlock x:Name="helpMessageLabel" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Foreground="{DynamicResource ForegroundMain}" TextAlignment="Center" >
+            Benvenuto in OB M2 Browning<LineBreak/>
+            by ✧🄰🅁🄴🄰51🄲🅁🄴🅆✧
+        </TextBlock>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="addRunnerButton" Click="addRunnerButton_Click">

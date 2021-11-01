@@ -87,6 +87,13 @@
                     </Slider.Background>
                 </Slider>
                 <ProgressBar Grid.Column="1" Grid.Row="1" Margin="5" Value="{Binding Progress, Mode=OneWay}" >
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="White" Offset="0.497"/>
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
                     <ProgressBar.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -464,7 +471,7 @@
                         <Label Content="{Binding HitCount, Mode=OneWay}" Foreground="{DynamicResource ForegroundGood}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Personalizzati:" Foreground="{DynamicResource ForegroundCustom}" />
+                        <Label Content="Liberi/Scaduti:" Foreground="{DynamicResource ForegroundCustom}" />
                         <Label Content="{Binding CustomCount, Mode=OneWay}" Foreground="{DynamicResource ForegroundCustom}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">

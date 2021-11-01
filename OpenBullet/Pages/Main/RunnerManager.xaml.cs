@@ -152,7 +152,7 @@ namespace OpenBullet
         private void removeAllRunnersButton_Click(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show($"Sei sicuro di voler rimuovere tutti i Runner?", 
-                "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                "Conferma", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 var list = vm.Runners.Where(r => !r.Runner.Busy).ToList();
                 for (int i = list.Count - 1; i >= 0; i--)
