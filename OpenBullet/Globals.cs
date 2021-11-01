@@ -36,6 +36,7 @@ namespace OpenBullet
         // Version
         public static string obVersion = "1.0.4";
 
+
         // Main Window
         public static MainWindow mainWindow;
 

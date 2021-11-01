@@ -213,9 +213,14 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+
     <Reference Include="Telegram.Bot, Version=16.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Telegram.Bot.16.0.2\lib\netstandard1.3\Telegram.Bot.dll</HintPath>
+
+    <Reference Include="Telegram.Bot">
+      <HintPath>..\..\..\Github Repo\Silverbullet\packages\Telegram.Bot.15.7.1\lib\net45\Telegram.Bot.dll</HintPath>
+
     </Reference>
     <Reference Include="Tesseract, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tesseract.3.3.0\lib\net45\Tesseract.dll</HintPath>
