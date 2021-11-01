@@ -38,7 +38,7 @@
         <Label Grid.Column="0" Grid.Row="2" Content="Type:" />
         <ComboBox x:Name="typeCombobox" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="5"/>
         <Label Grid.Column="0" Grid.Row="3" Content="Scopo:" />
-        <TextBox x:Name="purposeTextbox" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="5"/>
+        <TextBox x:Name="purposeTextbox" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="5" />
         <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" x:Name="acceptButton" Content="SALVA" Click="acceptButton_Click" Margin="5"/>
     </Grid>
 </Page>

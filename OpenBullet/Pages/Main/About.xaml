@@ -7,6 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="550" d:DesignWidth="780"
       Title="About">
+    <Page.Background>
+        <ImageBrush ImageSource="/OpenBullet;component/Images/UoJzcni.png"/>
+    </Page.Background>
 
     <Grid HorizontalAlignment="Center" Margin="10,0,10,0.4" Width="760">
         <Grid.RowDefinitions>
@@ -52,7 +55,7 @@
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Width="760" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,34.6,0,34" Height="73">
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Width="760" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,34.6,0,45" Height="62">
             <Button x:Name="telegramButton" Click="telegramButton_Click" Margin="0,5,0,5.8" Width="95">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/OpenBullet;component/Images/Icons/git.png" Width="20" />
@@ -96,7 +99,7 @@
         </StackPanel>
         <TextBlock 
             TextWrapping="Wrap" 
-            Foreground="#FFF6F700" Margin="585,22,13,17.4" Grid.Row="4" Width="162" Height="19" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Author Ruri - mod"/><Run Text="."/><Run Text="  NioBrain "/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
+            Foreground="#FFF6F700" Margin="585,22,13,17.4" Grid.Row="4" Width="162" Height="19" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Black"><Run Text="Author Ruri - mod"/><Run Text="."/><Run Text="  NioBrain "/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/></TextBlock>
         <TextBlock
             FontSize="18" 
             TextWrapping="Wrap" 

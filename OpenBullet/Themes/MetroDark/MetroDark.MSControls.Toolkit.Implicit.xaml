@@ -59,8 +59,8 @@
 							<RowDefinition Height="30" />
 							<RowDefinition Height="Auto" />
 						</Grid.RowDefinitions>
-						<Border BorderThickness="0" Background="{StaticResource TransparentBrush}" />
-						<Rectangle Fill="{StaticResource TransparentBrush}" Margin="-2 0" />
+						<Border BorderThickness="0" Background="{StaticResource TransparentBrush}" CornerRadius="5"/>
+                        <Rectangle Fill="{StaticResource TransparentBrush}" Margin="-2 0" RadiusX="2" RadiusY="2"/>
 						<Path x:Name="DefaultRatingItem" Data="M15,0 L18.6,11.373603 L30,11.459046 L20.824955,18.573566 L24.270519,30 L15,23.023449 L5.7294912,30 L9.1750822,18.573566 L0,11.459046 L11.399999,11.373603 z" Opacity="1" Stretch="Fill" Fill="{StaticResource RatingItemBackgroundBrush}" Stroke="{StaticResource RatingItemBorderBrush}" StrokeThickness="0.4" StrokeLineJoin="Round" UseLayoutRounding="False" VerticalAlignment="Stretch" />
 
 						<inputToolkitPrimitives:LinearClipper ExpandDirection="Right" RatioVisible="{TemplateBinding DisplayValue}">
@@ -121,9 +121,9 @@
 						<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
 							<ItemsPresenter />
 						</Border>
-						<Border x:Name="ReadOnlyVisualElement" BorderBrush="{StaticResource RatingReadOnlyBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource RatingReadOnlyBackgroundBrush}" IsHitTestVisible="False" Opacity="0" />
-						<Border x:Name="DisabledVisualElement" BorderBrush="{StaticResource RatingDisabledBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource RatingDisabledBackgroundBrush}" IsHitTestVisible="False" Opacity="0" />
-						<Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" RadiusY="1" RadiusX="1" StrokeThickness="1" Visibility="Collapsed" />
+						<Border x:Name="ReadOnlyVisualElement" BorderBrush="{StaticResource RatingReadOnlyBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource RatingReadOnlyBackgroundBrush}" IsHitTestVisible="False" Opacity="0" CornerRadius="5"/>
+						<Border x:Name="DisabledVisualElement" BorderBrush="{StaticResource RatingDisabledBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource RatingDisabledBackgroundBrush}" IsHitTestVisible="False" Opacity="0" CornerRadius="5"/>
+                        <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" RadiusY="2" RadiusX="2" StrokeThickness="1" Visibility="Collapsed"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsReadOnly" Value="True">
@@ -430,10 +430,10 @@
             </vsm:VisualStateManager.VisualStateGroups>
             <Border>
               <Grid>
-                <Border x:Name="Background" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Height="Auto" Margin="0" VerticalAlignment="Stretch" />
-                <Border x:Name="ExpandedBackground" BorderBrush="{StaticResource AccordionButtonExpandedBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonExpandedBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" />
-                <Border x:Name="MouseOverBackground" BorderBrush="{StaticResource AccordionButtonHoverBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonHoverBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" />
-                <Border x:Name="PressedBackground" BorderBrush="{StaticResource AccordionButtonPressedBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonPressedBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" />
+                <Border x:Name="Background" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Height="Auto" Margin="0" VerticalAlignment="Stretch" CornerRadius="5"/>
+                <Border x:Name="ExpandedBackground" BorderBrush="{StaticResource AccordionButtonExpandedBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonExpandedBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" CornerRadius="5"/>
+                <Border x:Name="MouseOverBackground" BorderBrush="{StaticResource AccordionButtonHoverBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonHoverBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" CornerRadius="5"/>
+                <Border x:Name="PressedBackground" BorderBrush="{StaticResource AccordionButtonPressedBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{StaticResource AccordionButtonPressedBackgroundBrush}" Height="Auto" Margin="0" Opacity="0" VerticalAlignment="Stretch" CornerRadius="5"/>
                 <Grid Background="{StaticResource TransparentBrush}">
                   <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="cd0" Width="Auto" />
@@ -757,7 +757,7 @@
 								</vsm:VisualState>
 							</vsm:VisualStateGroup>
 						</vsm:VisualStateManager.VisualStateGroups>
-						<Border x:Name="Background" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+						<Border x:Name="Background" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
 							<Grid>
 								<Grid.RowDefinitions>
 									<RowDefinition Height="Auto" x:Name="rd0" />
@@ -813,7 +813,7 @@
 								<vsm:VisualState x:Name="Unfocused" />
 							</vsm:VisualStateGroup>
 						</vsm:VisualStateManager.VisualStateGroups>
-						<Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+						<Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" CornerRadius="5">
 							<ScrollViewer BorderBrush="{StaticResource TransparentBrush}" BorderThickness="0" Background="{x:Null}" HorizontalScrollBarVisibility="Disabled" IsTabStop="False" Margin="0" Padding="0" VerticalScrollBarVisibility="Disabled">
 								<ItemsPresenter />
 							</ScrollViewer>
@@ -892,7 +892,7 @@
                   <Border.RenderTransform>
                     <TranslateTransform X="1" Y="1" />
                   </Border.RenderTransform>
-                  <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" HorizontalAlignment="Stretch" Opacity="1.0" Padding="0">
+                  <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5" HorizontalAlignment="Stretch" Opacity="1.0" Padding="0">
                     <Border.RenderTransform>
                       <TransformGroup>
                         <TranslateTransform X="-1" Y="-1" />

@@ -70,7 +70,7 @@
                 <Label Content="Immagine Di Sfondo" />
                 <Image x:Name="loadBackgroundImage" Source="/Images/Icons/folder.png" Height="20" Width="20" HorizontalAlignment="Right" MouseDown="loadBackgroundImage_MouseDown"/>
             </DockPanel>
-            <TextBox IsReadOnly="True" Text="{Binding BackgroundImage}" DockPanel.Dock="Left"/>
+            <TextBox IsReadOnly="False" Text="{Binding BackgroundImage}" DockPanel.Dock="Left"/>
             <Image x:Name="backgroundImagePreview" Width="80" Height="60" Source="/Images/Themes/empty.png" Margin="0 10 0 0"/>
             <Separator Margin="0 10" />
             <DockPanel>

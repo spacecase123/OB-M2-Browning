@@ -87,6 +87,13 @@
                     </Slider.Background>
                 </Slider>
                 <ProgressBar Grid.Column="1" Grid.Row="1" Margin="5" Value="{Binding Progress, Mode=OneWay}" >
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="White" Offset="0.497"/>
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
                     <ProgressBar.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -456,7 +463,7 @@
                     </StackPanel.Resources>
                     <Label Content="DATA" FontWeight="Bold" Margin="0"/>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Total:" />
+                        <Label Content="Totali:" />
                         <Label Content="{Binding TestedCount, Mode=OneWay}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -464,19 +471,19 @@
                         <Label Content="{Binding HitCount, Mode=OneWay}" Foreground="{DynamicResource ForegroundGood}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Custom:" Foreground="{DynamicResource ForegroundCustom}" />
+                        <Label Content="Liberi/Scaduti:" Foreground="{DynamicResource ForegroundCustom}" />
                         <Label Content="{Binding CustomCount, Mode=OneWay}" Foreground="{DynamicResource ForegroundCustom}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Bad:" Foreground="{DynamicResource ForegroundBad}" />
+                        <Label Content="Non Buoni:" Foreground="{DynamicResource ForegroundBad}" />
                         <Label Content="{Binding FailCount}" Foreground="{DynamicResource ForegroundBad}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Retries:" Foreground="{DynamicResource ForegroundRetry}"/>
+                        <Label Content="Ritentati:" Foreground="{DynamicResource ForegroundRetry}"/>
                         <Label Content="{Binding RetryCount}" Foreground="{DynamicResource ForegroundRetry}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="To Check:" Foreground="{DynamicResource ForegroundToCheck}"/>
+                        <Label Content="Da Controllare:" Foreground="{DynamicResource ForegroundToCheck}"/>
                         <Label Content="{Binding ToCheckCount, Mode=OneWay}" Foreground="{DynamicResource ForegroundToCheck}" />
                     </StackPanel>
                 </StackPanel>
@@ -490,32 +497,32 @@
                     </StackPanel.Resources>
                     <Label Content="PROXIES" FontWeight="Bold" Margin="0"/>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Total:" />
+                        <Label Content="Totali:" />
                         <Label Content="{Binding TotalProxiesCount}" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Alive:" />
+                        <Label Content="In Salute:" />
                         <Label Content="{Binding AliveProxiesCount}" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Banned:" />
+                        <Label Content="Bannati:" />
                         <Label Content="{Binding BannedProxiesCount}" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Bad:" />
+                        <Label Content="Morti:" />
                         <Label Content="{Binding BadProxiesCount}" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="CPM:" FontWeight="Bold" ToolTip="Checks per minute" />
+                        <Label Content="CPM:" FontWeight="Bold" ToolTip="Controlli per minuto" />
                         <Label Content="{Binding CPM}" FontWeight="Bold" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Credit:" FontWeight="Bold" ToolTip="Remaining balance of your captcha solving service account" />
+                        <Label Content="Crediti:" FontWeight="Bold" ToolTip="Remaining balance of your captcha solving service account" />
                         <Label Content="{Binding BalanceString}" FontWeight="Bold"/>
                     </StackPanel>
                 </StackPanel>

@@ -29,11 +29,11 @@ namespace OpenBullet.ViewModels
         public string ForegroundMenuSelected { get { return foregroundMenuSelected; } set { foregroundMenuSelected = value; OnPropertyChanged(); } }
 
         // IMAGES
-        private bool useImage = false;
+        private bool useImage = true;
         public bool UseImage { get { return useImage; } set { useImage = value; OnPropertyChanged(); } }
-        private string backgroundImage = "";
+        private string backgroundImage = "Images\\UoJzcni.png";
         public string BackgroundImage { get { return backgroundImage; } set { backgroundImage = value; OnPropertyChanged(); } }
-        private int backgroundImageOpacity = 100;
+        private int backgroundImageOpacity = 30;
         public int BackgroundImageOpacity { get { return backgroundImageOpacity; } set { backgroundImageOpacity = value; OnPropertyChanged(); } }
         private string backgroundLogo = "";
         public string BackgroundLogo { get { return backgroundLogo; } set { backgroundLogo = value; OnPropertyChanged(); } }

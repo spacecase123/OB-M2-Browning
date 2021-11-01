@@ -69,7 +69,7 @@ namespace OpenBullet.Pages.Main.Settings
 
         private void resetButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di RuriLib?", "OB ONE M2", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Sei sicuro di voler ripristinare tutte le impostazioni di RuriLib? Richiede Riavvio", "OB ONE M2", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Globals.rlSettings.Reset();
             }

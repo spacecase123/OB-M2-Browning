@@ -53,7 +53,7 @@ namespace OpenBullet
 
             if (Globals.obSettings.General.ChangeRunnerInterface)
             {
-                Globals.LogInfo(Components.About, "Changed the Runner interface");
+                Globals.LogInfo(Components.About, "Interfaccia del Runner modificata");
                 Grid.SetColumn(rightGrid, 0);
                 Grid.SetRow(rightGrid, 1);
                 Grid.SetColumn(bottomLeftGrid, 2);
@@ -61,7 +61,7 @@ namespace OpenBullet
             }
             
             logBox.AppendText("", Colors.White);
-            logBox.AppendText("Runner initialized succesfully!"+ Environment.NewLine, Globals.GetColor("ForegroundMain"));
+            logBox.AppendText("Runner inizializzato con successo!"+ Environment.NewLine, Globals.GetColor("ForegroundMain"));
         }
 
         #region Events

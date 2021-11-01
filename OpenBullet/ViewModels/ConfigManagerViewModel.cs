@@ -157,18 +157,7 @@ namespace OpenBullet.ViewModels
             var list = new List<ConfigViewModel>();
             cachedConfigs = new List<ConfigViewModel>();
 
-            if (Globals.obSettings.Sources.Sources.Count == 0)
-            {
-                try
-                {
-                    gitHub.ApiUrl = "https://github.com/PurityWasHere/Anomaly-Mod-Hosting/blob/master/Configs.zip?raw=true";
-
-                    //counter++;
-                    Globals.obSettings.Sources.Sources.Add(gitHub);
-                }
-                catch { }
-            }
-
+            
 
             foreach (var source in Globals.obSettings.Sources.Sources)
             {
@@ -196,7 +185,7 @@ namespace OpenBullet.ViewModels
                 catch (Exception ex)
                 {
                     if (!source.ApiUrl.Contains("Anomaly-Mod-Hosting"))
-                        MessageBox.Show($"Could not contact API {source.ApiUrl}\r\nReason: {ex.Message}");
+                        MessageBox.Show($"Non posso contattare l'API {source.ApiUrl}\r\nRisposta: {ex.Message}");
                     continue;
                 }
 
@@ -204,7 +193,7 @@ namespace OpenBullet.ViewModels
                 if (status != null && status == "Error")
                 {
                     if (!source.ApiUrl.Contains("Anomaly-Mod-Hosting"))
-                        MessageBox.Show($"Error from API {source.ApiUrl}\r\nThe server says: {Encoding.ASCII.GetString(file)}");
+                        MessageBox.Show($"Errore da API {source.ApiUrl}\r\nIl server dice: {Encoding.ASCII.GetString(file)}");
                     continue;
                 }
 

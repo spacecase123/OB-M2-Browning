@@ -27,7 +27,7 @@
                 <TextBox DockPanel.Dock="Left" Text="{Binding ParseTarget, UpdateSourceTrigger=PropertyChanged}" />
             </DockPanel>
             <DockPanel>
-                <CheckBox x:Name="captureBox" VerticalContentAlignment="Center" DockPanel.Dock="Left" Content="Is Capture" IsChecked="{Binding IsCapture}" Foreground="{Binding Path=IsCapture, Converter={StaticResource BrushConverter}}" Click="CaptureBox_Click"/>
+                <CheckBox x:Name="captureBox" VerticalContentAlignment="Center" DockPanel.Dock="Left" Content="Is Capture" IsChecked="{Binding IsCapture, UpdateSourceTrigger=PropertyChanged}" Click="CaptureBox_Click" />
                 <Label DockPanel.Dock="Left" Content="Var/Cap Nome:" Margin="5 0 0 0" />
                 <TextBox DockPanel.Dock="Left" Text="{Binding VariableName, UpdateSourceTrigger=PropertyChanged}" />
             </DockPanel>
@@ -39,12 +39,12 @@
                 </Grid.ColumnDefinitions>
 
                 <DockPanel Grid.Column="0">
-                    <Label DockPanel.Dock="Left" Content="Prefix:" />
+                    <Label DockPanel.Dock="Left" Content="Prefisso:" />
                     <TextBox DockPanel.Dock="Left" Text="{Binding Prefix, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
                 <DockPanel Grid.Column="1">
-                    <Label DockPanel.Dock="Left" Content="Suffix:" />
+                    <Label DockPanel.Dock="Left" Content="Suffisso:" />
                     <TextBox DockPanel.Dock="Left" Text="{Binding Suffix, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 

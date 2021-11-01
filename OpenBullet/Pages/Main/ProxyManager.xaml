@@ -268,19 +268,19 @@
             </Expander>
             <Label Content="STATISTICHE" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
-                <Label Content="Total:" />
+                <Label Content="Totali:" />
                 <Label Content="{Binding TotalProxies}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Tested:" />
+                <Label Content="Testati:" />
                 <Label Content="{Binding TestedProxiesCount}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Working:" Foreground="{DynamicResource ForegroundGood}" />
+                <Label Content="Funzionanti:" Foreground="{DynamicResource ForegroundGood}" />
                 <Label Content="{Binding WorkingProxiesCount}" Foreground="{DynamicResource ForegroundGood}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Not Working:" Foreground="{DynamicResource ForegroundBad}" />
+                <Label Content="Morti:" Foreground="{DynamicResource ForegroundBad}" />
                 <Label Content="{Binding NotWorkingProxiesCount}" Foreground="{DynamicResource ForegroundBad}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -303,7 +303,7 @@
                 <Label Content="Chain:"/>
                 <Label Content="{Binding ChainProxiesCount}"/>
             </StackPanel>
-            <Label Content="OPTZIONI" FontWeight="Bold" />
+            <Label Content="OPZIONI" FontWeight="Bold" />
             <CheckBox Content="Solo Non Testati" IsChecked="{Binding OnlyUntested}" Margin="0 5 0 0" />
             <StackPanel Orientation="Horizontal">
                 <Label Content="Timeout (sec):" Margin="0 0 0 0"/>

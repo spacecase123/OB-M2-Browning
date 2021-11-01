@@ -34,22 +34,142 @@
                     <Setter Property="Margin" Value="1" />
                 </Style>
             </Grid.Resources>
-            <Button Grid.Column="0" Grid.Row="0" x:Name="blockRequestButton" Background="LimeGreen" Content="REQUEST" Click="blockRequestButton_Click" />
-            <Button Grid.Column="1" Grid.Row="0" x:Name="blockUtilityButton" Background="Wheat" Content="UTILITY" Click="blockUtilityButton_Click" />
-            <Button Grid.Column="2" Grid.Row="0" x:Name="blockKeycheckButton" Background="DodgerBlue" Content="KEY CHECK" Click="blockKeycheckButton_Click" />
-            <Button Grid.Column="0" Grid.Row="1" x:Name="blockParseButton" Background="Gold" Content="PARSE" Click="blockParseButton_Click" />
-            <Button Grid.Column="1" Grid.Row="1" x:Name="blockFunctionButton" Background="YellowGreen" Content="FUNCTION" Click="blockFunctionButton_Click" />
-            <Button Grid.Column="2" Grid.Row="1" x:Name="blockRecaptchaButton" Background="Turquoise" Content="RECAPTCHA" Click="blockRecaptchaButton_Click" />
-            <Button Grid.Column="0" Grid.Row="2" x:Name="blockCaptchaButton" Background="DarkOrange" Content="CAPTCHA" Click="blockCaptchaButton_Click" />
-            <Button Grid.Column="1" Grid.Row="2" x:Name="blockBypassCFButton" Background="DarkSalmon" Content="BYPASS CF" Click="blockBypassCFButton_Click" />
-            <Button Grid.Column="2" Grid.Row="2" x:Name="blockTCPButton" Background="MediumPurple" Content="TCP" Click="blockTCPButton_Click" />
-            <Button Grid.Column="0" Grid.Row="3" x:Name="blockOCRButton" Background="Azure" Content="OCR" Click="blockOCRButton_Click" />
-            <Button Grid.Column="1" Grid.Row="3" x:Name="blockBlockchainButton" Background="DarkSlateBlue" Content="BLOCKCHAIN DNS" Click="blockBlockchainButton_Click" />
+            <Button Grid.Column="0" Grid.Row="0" x:Name="blockRequestButton" Content="REQUEST" Click="blockRequestButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF5F7F5" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="LimeGreen" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="0" x:Name="blockUtilityButton" Content="UTILITY" Click="blockUtilityButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF7F7F7" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="Wheat" Offset="0.502"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="0" x:Name="blockKeycheckButton" Content="KEY CHECK" Click="blockKeycheckButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF5F6F7" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="DodgerBlue" Offset="0.503"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="blockParseButton" Content="PARSE" Click="blockParseButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDCDCDB" Offset="0"/>
+                        <GradientStop Color="#FFDDDDDB" Offset="1"/>
+                        <GradientStop Color="Gold" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="1" x:Name="blockFunctionButton" Content="FUNCTION" Click="blockFunctionButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFAFAFA" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="YellowGreen" Offset="0.503"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="1" x:Name="blockRecaptchaButton" Content="RECAPTCHA" Click="blockRecaptchaButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="Turquoise" Offset="0.506"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="blockCaptchaButton" Content="CAPTCHA" Click="blockCaptchaButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFDFDFD" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="DarkOrange" Offset="0.505"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="blockBypassCFButton" Content="BYPASS CF" Click="blockBypassCFButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF6F6F5" Offset="0"/>
+                        <GradientStop Color="#FFF4F4F3" Offset="1"/>
+                        <GradientStop Color="DarkSalmon" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="2" x:Name="blockTCPButton" Content="TCP" Click="blockTCPButton_Click"  >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="MediumPurple" Offset="0.502"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="3" x:Name="blockOCRButton" Content="OCR" Click="blockOCRButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FFAEACAC" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="3" x:Name="blockBlockchainButton" Content="BLOCKCHAIN DNS" Click="blockBlockchainButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FF8782AB" Offset="0.502"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
 
-            <Button Grid.Column="0" Grid.Row="5" x:Name="blockNavigateButton" Background="RoyalBlue" Foreground="Gainsboro" Content="NAVIGATE" Click="blockNavigateButton_Click" />
-            <Button Grid.Column="1" Grid.Row="5" x:Name="blockBrowserActionButton" Background="Green" Foreground="Gainsboro" Content="BROWSER ACTION" Click="blockBrowserActionButton_Click" />
-            <Button Grid.Column="2" Grid.Row="5" x:Name="blockElementActionButton" Background="Firebrick" Foreground="Gainsboro" Content="ELEMENT ACTION" Click="blockElementActionButton_Click" />
-            <Button Grid.Row="6" Grid.Column="0" x:Name="blockExecuteJSButton" Background="Indigo" Foreground="Gainsboro" Content="EXECUTE JS" Click="blockExecuteJSButton_Click" />
+            <Button Grid.Column="0" Grid.Row="5" x:Name="blockNavigateButton" Foreground="Black" Content="NAVIGATE" Click="blockNavigateButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF0A0B0B" Offset="1"/>
+                        <GradientStop Color="#FF809EF9" Offset="0.505"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="5" x:Name="blockBrowserActionButton" Foreground="Black" Content="BROWSER ACTION" Click="blockBrowserActionButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF030303" Offset="1"/>
+                        <GradientStop Color="#FF83FF85" Offset="0.514"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="5" x:Name="blockElementActionButton" Foreground="Black" Content="ELEMENT ACTION" Click="blockElementActionButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF060606" Offset="1"/>
+                        <GradientStop Color="#FFFC6C6C" Offset="0.538"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="6" Grid.Column="0" x:Name="blockExecuteJSButton" Foreground="Black" Content="EXECUTE JS" Click="blockExecuteJSButton_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF030303" Offset="1"/>
+                        <GradientStop Color="#FFCD8BFD" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </Grid>
     </Grid>
 </Page>
