@@ -1,3 +1,14 @@
+**22/11/21** V.1.0.6 
+Eliminato quadrato bianco dal Running.(eliminata scrollbar orizontale)
+Aggiunta opzione Copia nel menù Contestuale del Debugger.
+Aggiunta opzione Apri in NotePad nel menù Contestuale del Debugger.
+Aggiunta opzione Seleziona Tutto Nel menù Contestuale del Debugger.
+Aggiunte icone alle voci dello Stacker
+Modicati Colori dei Blocchi Stacker(per toni più accesi)
+Risolto Bug grafico delle ComboBox
+Scala Bots Test Proxy portata a 500
+Aggiunte le descrizioni di tutte le funzioni in Block Function in Italiano
+______________________________________
 **12/11/21** V.1.0.5
 -Aggiunta estensione .cyb
 -Aggiunto crea cartella  in blocco utility
