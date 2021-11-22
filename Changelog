@@ -8,16 +8,17 @@ Modicati Colori dei Blocchi Stacker(per toni più accesi)
 Risolto Bug grafico delle ComboBox
 Scala Bots Test Proxy portata a 500
 Aggiunte le descrizioni di tutte le funzioni in Block Function in Italiano
+Modificata Barra progresso in Runner 
 ______________________________________
 **12/11/21** V.1.0.5
--Aggiunta estensione .cyb
--Aggiunto crea cartella  in blocco utility
--Modifica layout text box
--Modifica stile MainWindow
--Tradotte risposte Debugger
--Nuovo stile Bottoni
--Aggiunte funzioni in utility Copy e Move  File
--Aggiunta Icona Telegram In MainWindow
+Aggiunta estensione .cyb
+Aggiunto crea cartella  in blocco utility
+Modifica layout text box
+Modifica stile MainWindow
+Tradotte risposte Debugger
+Nuovo stile Bottoni
+Aggiunte funzioni in utility Copy e Move  File
+Aggiunta Icona Telegram In MainWindow
 _____________________________________
 01/11/21 V.1.0.4
 Aggiunto Nuovo Tema
