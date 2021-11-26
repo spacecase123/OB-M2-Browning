@@ -1,4 +1,16 @@
-**22/11/21** V.1.0.6 
+**26/11/21** V.1.0.6 
+-Aggiunto menu' contestuale WordlistManager
+(Aggiungi,Seleziona,Apri Percorso, Apri Cartella Wordlist,Elimina 
+selezionato,Elimina Tutto.)
+-Aggiunto menu' contestuale ConfigManager
+(Seleziona tutto,Edita Config, Apri percorso)
+-Aggiunto menu' contestuale ProxyManager
+(Seleziona Tutto, Elimina Tutto)
+-Aggiunte Icone ai menu' contestuali delle varie pagine.
+-Implementata Cartella principale delle Wordlist
+(copia in automatico tutte le wordlist aggiunte al DB in una cartella 
+specifica "Wordlist" nella radice del programma)
+-Aggiunto Pulsante Apri Cartella in WordlistManager
 -Eliminato quadrato bianco dal Running.(eliminata scrollbar orizzontale)
 -Aggiunta opzione Copia nel menu' Contestuale del Debugger.
 -Aggiunta opzione Apri in NotePad nel menu' Contestuale del Debugger.
