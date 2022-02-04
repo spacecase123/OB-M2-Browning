@@ -1,3 +1,21 @@
+**17/01/2022 V.2.0.4 Pro**
+- Aggiunta Gestioone Suoni
+- Modifica Suono click con gestione file esterni
+- Modifica Suono Onload con gestione file esterni
+- Modifica Suono On hit con gestione file esterni
+- Modifica Suono On Reload con gestione file esterni
+- Aggiunto CheckBox Save Hits on File in Runner
+- Aggiunta Sezione Requirements
+- Aggiunto Tema Areo
+- Aggiunto Tema MetroLight
+- Aggiunto Tema Metro dark Old Style
+- Gestione Cambio Temi In RunTime
+- Modifica stile Dialog AddBloks
+- Risolto Bug Funzione Compilatore
+- Aggiunti Buttons Scrape Proxy ITA
+- Aggiunto Button Menù Open Main Folder
+- Altri Fix Bug
+___________________________________
 **17/01/2022 V.2.0.3 Pro**
 - Aggiunta Estensione file OBM
 - Implementate Gif Animate
