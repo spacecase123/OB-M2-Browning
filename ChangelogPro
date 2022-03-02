@@ -2,6 +2,7 @@
 - Aggiunto Button "ADD Config" alla finestra di dialogo "Seleziona Config" del Runner.
 - Aggiunte opzioni Copia , incolla Undo Al Blocco REQUEST su indirizzo, Header, E Cookies.
 - Aggiunti Buttons "USER ENC" e "PASS ENC" (funzione URLEconde) nella finestra stacker sezione Loliscript Code.
+- Aggiunto Button Seleziona tutti i Blocchi in stacker view.
 - Modificati i links dei proxy ITA in proxy manager.
 - Modificati Links Cloud, Donazioni.
 - Aggiunto Button Richiesta Assistenza a Indirizzo eMail.
