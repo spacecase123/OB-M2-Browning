@@ -1,3 +1,21 @@
+**02/03/2022 V.2.0.6 Pro**
+- Aggiunto Button "ADD Config" alla finestra di dialogo "Seleziona Config" del Runner.
+- Aggiunte opzioni Copia , incolla Undo Al Blocco REQUEST su indirizzo, Header, E Cookies.
+- Aggiunti Buttons "USER ENC" e "PASS ENC" (funzione URLEconde) nella finestra stacker sezione Loliscript Code.
+- Modificati i links dei proxy ITA in proxy manager.
+- Modificati Links Cloud, Donazioni.
+- Aggiunto Button Richiesta Assistenza a Indirizzo eMail.
+- Risolto problema del colore dei testi del Round-Button nel blocco Parse.
+- Risolto problema della funzione Apri in notepad , menù contestuale Log e Loliscript.
+- Aggiunto menù contestale in LoliscriptCode Box.
+- Aggiunte opzioni di Copia , incolla, Clear, Elimina, Seleziona Tutto e Apri in notepad nella finestra Loliscriptcode.
+- Modificati colori dei Blocchi della finestra di dialogo AddBlock
+__________________________________
+**06/02/2022 V.2.0.5 Pro**
+- Risolto problema salvataggio impostazioni temi
+- Aggiunto button "Add Config" rescan automatico
+- Adattamento dimensioni Buttons x Tema "OldStyle" e "DARK"
+__________________________________
 **17/01/2022 V.2.0.4 Pro**
 - Aggiunta Gestione Suoni
 - Modifica Suono click con gestione file esterni
