@@ -1,15 +1,22 @@
+**05/03/2022** V 2.0.7 Pro
+- Fix allineamento buttons block Request x tema Metro
+- Scala Bots up to 500 Runner
+- Fix buttons Tema metro
+- Restayling del testo finestra del Log Runner
+- Icone dei menù contestuali settate in alta risoluzione.
+- Compilazione in modalità "Applicazione con attendibilità totale".
+__________________________________
 **02/03/2022 V.2.0.6 Pro**
 - Aggiunto Button "ADD Config" alla finestra di dialogo "Seleziona Config" del Runner.
 - Aggiunte opzioni Copia , incolla Undo Al Blocco REQUEST su indirizzo, Header, E Cookies.
-- Aggiunti Buttons "USER ENC" e "PASS ENC" (funzione URLEconde) nella finestra stacker sezione Loliscript Code.
-- Aggiunto Button Seleziona tutti i Blocchi in stacker view.
+- Aggiunti Buttons "USER ENC" e "PASS ENC" (funzione URLEconde) nella finestra stacker  sezione Loliscript Code.
 - Modificati i links dei proxy ITA in proxy manager.
 - Modificati Links Cloud, Donazioni.
 - Aggiunto Button Richiesta Assistenza a Indirizzo eMail.
-- Risolto problema del colore dei testi del Round-Button nel blocco Parse.
+- Risolto problema del colore dei testi del RadioButton nel blocco Parse.
 - Risolto problema della funzione Apri in notepad , menù contestuale Log e Loliscript.
 - Aggiunto menù contestale in LoliscriptCode Box.
-- Aggiunte opzioni di Copia , incolla, Clear, Elimina, Seleziona Tutto e Apri in notepad nella finestra Loliscriptcode.
+- Aggiunte opzioni di  Copia , incolla, Clear, Elimina, Seleziona Tutto e Apri in notepad nella finestra Loliscriptcode.
 - Modificati colori dei Blocchi della finestra di dialogo AddBlock
 __________________________________
 **06/02/2022 V.2.0.5 Pro**
