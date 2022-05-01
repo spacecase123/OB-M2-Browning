@@ -14,6 +14,8 @@
 - Rivisitato layout  e colori dello Stacker
 - Aggiunto bordo Esterno Main Window
 - Nuovo Layout Config General
+- Nuova Loading Window
+- Nuova animazione Di attesa Caricamento
 _______________________________
 23/04/2022 V. 2.0.8 Pro
 Aggiunto comando "sendToDebugger" in HitDb
