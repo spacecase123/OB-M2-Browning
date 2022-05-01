@@ -1,3 +1,20 @@
+**01/05/2022 V. 2.0.9 Pro**
+- Aumentato livello di personalizzazione dei colori
+- Nuovi Controlli Checkbox
+- Nuova pagina Suoni
+- Nuovo Controllo  Proxy ON/OFF nella pagina Runner
+- Nuovo Custom Message Box 
+- Aggiunto Custom Message Box di avvertimento
+- Testo animato di benvenuto
+- Testo Animato Your Name (Slogan)
+- Nuova barra Menu' Verticale
+- Nuove icone Material Design Telegram, Screenshot, Log
+- Nuovo controllo Check proxy
+- Conteggio Download Versione da GitHub
+- Rivisitato layout  e colori dello Stacker
+- Aggiunto bordo Esterno Main Window
+- Nuovo Layout Config General
+_______________________________
 23/04/2022 V. 2.0.8 Pro
 Aggiunto comando "sendToDebugger" in HitDb
 Aggiunto combobox per la selezione del Targhet in Parse Block
