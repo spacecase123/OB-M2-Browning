@@ -10,7 +10,7 @@
 - Nuovo Stile Text Box.
 - Aggiunti nuovi dati in Config Manager : colonna "Blocks"(blocchi presenti in configurazione), Colonna "Wordlist" (Wordlists Ammesse),  Colonna "Info" (informazioni Aggiuntive ).
 - Aggiunti comandi Esporta Dati di configurazione e Copia Dati di configurazione nel menu' contestuale in ConfigManager.
-
+_______________________________
 **01/05/2022 V. 2.0.9 Pro**
 - Aumentato livello di personalizzazione dei colori
 - Nuovi Controlli Checkbox
